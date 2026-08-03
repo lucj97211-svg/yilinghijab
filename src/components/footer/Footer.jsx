@@ -33,7 +33,7 @@ const columns = [
     title: 'Contact',
     links: [
       { label: 'Yiwu, Zhejiang, China', to: '/contact', isAddress: true },
-      { label: 'WhatsApp: +86 (to be updated)', to: '/contact' },
+      { label: 'WhatsApp: +86 150-8824-8404', to: '/contact' },
       { label: 'Email: sales@yilinghijab.com', to: '/contact' },
     ],
   },

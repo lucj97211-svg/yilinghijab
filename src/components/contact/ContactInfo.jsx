@@ -20,8 +20,8 @@ export default function ContactInfo() {
           <Phone size={20} className="text-[#C8962E] flex-shrink-0 mt-0.5" />
           <div>
             <h4 className="font-semibold text-[#1A1A2E] text-sm mb-1">WhatsApp</h4>
-            <p className="text-sm text-[#4A4A5E]">+86 (to be updated)</p>
-            <a href="https://wa.me/86" target="_blank" rel="noopener noreferrer" className="text-xs text-[#C8962E] hover:text-[#B0841F]">Chat on WhatsApp →</a>
+            <p className="text-sm text-[#4A4A5E]">+86 150-8824-8404</p>
+            <a href="https://wa.me/8615088248404" target="_blank" rel="noopener noreferrer" className="text-xs text-[#C8962E] hover:text-[#B0841F]">Chat on WhatsApp →</a>
           </div>
         </div>
       </div>

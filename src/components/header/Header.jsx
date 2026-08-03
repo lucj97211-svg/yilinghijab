@@ -43,7 +43,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <span className="hidden md:inline text-xs text-[#8B95A8] font-medium">EN</span>
             <a
-              href="https://wa.me/86"
+              href="https://wa.me/8615088248404"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex items-center gap-1.5 text-xs text-[#E2E5EB] hover:text-white transition-colors"
