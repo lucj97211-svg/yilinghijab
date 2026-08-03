@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "siteId": "yiling-hijab",
+  "name": "yiling-hijab",
+  "kind": "react-vite",
+  "devCommand": "vite",
+  "buildCommand": "vite build",
+  "outputDir": "dist",
+  "entry": "index.html",
+  "databaseUrl": "",
+  "createdBy": "accio-site-builder",
+  "createdAt": "2026-08-03T08:38:44.117Z",
+  "installedAt": "2026-08-03T08:52:26.563Z"
+}
