@@ -30,7 +30,7 @@ export default function ContactInfo() {
           <Mail size={20} className="text-[#C8962E] flex-shrink-0 mt-0.5" />
           <div>
             <h4 className="font-semibold text-[#1A1A2E] text-sm mb-1">Email</h4>
-            <p className="text-sm text-[#4A4A5E]">sales@yilinghijab.com</p>
+            <p className="text-sm text-[#4A4A5E]">peri@wennuanfactory.com</p>
             <p className="text-xs text-[#7B7B8B]">We respond within 24 hours</p>
           </div>
         </div>
