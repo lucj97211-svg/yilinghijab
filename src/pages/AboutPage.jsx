@@ -35,7 +35,7 @@ export default function AboutPage() {
                 From Workshop to Global Manufacturer
               </h2>
               <p className="text-[#4A4A5E] leading-relaxed mb-4">
-                Yiwu Qiuyan Clothing Co., Ltd. was founded in 2008 with a single mission: produce hijabs and headscarves of
+                Yiwu Yiling Clothing Co., Ltd. was founded in 2008 with a single mission: produce hijabs and headscarves of
                 uncompromising quality at factory-direct prices. What began as a small workshop has grown into a
                 5,000-square-meter manufacturing facility employing over 200 skilled workers.
               </p>

@@ -69,7 +69,7 @@ export default function Footer() {
       <div className="border-t border-[#132D56] py-6">
         <div className="container-site flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[#8B95A8]">
-            &copy; {new Date().getFullYear()} Yiling Hijab — Yiwu Qiuyan Clothing Co., Ltd. All rights reserved.
+            &copy; {new Date().getFullYear()} Yiling Hijab — Yiwu Yiling Clothing Co., Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <span className="text-xs text-[#8B95A8]">EN</span>
