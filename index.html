@@ -8,5 +8,11 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      window.okkiConfigs = window.okkiConfigs || [];
+      function okkiAdd() { okkiConfigs.push(arguments); };
+      okkiAdd("analytics", { siteId: "359217-33178", gId: "" });
+    </script>
+    <script async src="//tfile.xiaoman.cn/okki/analyze.js?id=359217-33178-"></script>
   </body>
 </html>
