@@ -1,65 +1,53 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
-
-const rows = [
-  {
-    heading: '16 Years of Manufacturing Excellence',
-    body: 'Since 2008, we have specialized exclusively in hijab and headscarf production. Our dedicated focus means deep expertise in fabric behavior, print techniques, and finishing quality.',
-    bullets: ['200+ skilled workers on two production lines', 'Monthly capacity: 500,000+ pieces', 'Three-stage QC: incoming fabric → in-line → final inspection'],
-    image: '/assets/images/certification-documents.png',
-    imageAlt: 'Quality certification documents',
-    imageLeft: false,
-  },
-  {
-    heading: 'International Quality Certifications',
-    body: 'Our factory meets global quality benchmarks with certifications recognized worldwide.',
-    bullets: ['SGS certified for material safety and quality', 'Intertek approved for export compliance', 'TUV Rheinland audited production process'],
-    image: '/assets/images/placeholder.svg',
-    imageAlt: 'Quality standards illustration',
-    imageLeft: true,
-  },
-  {
-    heading: 'Dedicated OEM/ODM Service',
-    body: 'Your brand, our production line. We treat every OEM order with the same care as our own products.',
-    bullets: ['Dedicated account manager for each client', '7-day sample turnaround with express shipping', 'Custom packaging, labeling, and hang tag design'],
-    image: '/assets/images/placeholder.svg',
-    imageAlt: 'OEM service illustration',
-    imageLeft: false,
-  },
-];
 
 export default function WhyChooseRow() {
   return (
-    <section className="section-padding" data-component="why-choose-us">
-      <div className="container-site">
-        <div className="text-center mb-16">
-          <p className="text-xs tracking-[0.08em] uppercase font-medium text-[#C8962E] mb-3">Why Choose Yiling</p>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-[-0.02em] text-[#1A1A2E]">The Factory Behind the Fabric</h2>
+    <section data-component="factory-story" style={{ background: 'var(--cream-2)' }}>
+      {/* Factory floor full-bleed */}
+      <div className="relative w-full overflow-hidden" style={{ maxHeight: '560px' }}>
+        <img
+          src="/assets/images/factory-floor.png"
+          alt="Yiling factory production floor"
+          className="w-full object-cover"
+          style={{ maxHeight: '560px' }}
+        />
+        <div className="absolute inset-0" style={{ background: 'rgba(43,37,34,0.45)' }} />
+        <div className="absolute inset-0 flex items-center justify-center text-center px-6">
+          <div>
+            <p className="eyebrow mb-4" style={{ color: 'rgba(248,244,239,0.7)' }}>Est. 2008 · Yiwu, Zhejiang</p>
+            <h2 className="serif" style={{ fontSize: 'clamp(2.2rem,5vw,4rem)', color: 'var(--cream)', maxWidth: '700px' }}>
+              Built on 16 years of<br /><em>hijab craftsmanship.</em>
+            </h2>
+          </div>
         </div>
-        <div className="flex flex-col gap-16">
-          {rows.map((row, i) => (
-            <div
-              key={i}
-              className={`grid grid-cols-1 md:grid-cols-2 gap-10 items-center ${row.imageLeft ? '' : ''}`}
-              data-component="why-choose-row"
-            >
-              <div className={row.imageLeft ? 'md:order-2' : ''}>
-                <h3 className="text-xl md:text-2xl font-semibold text-[#1A1A2E] mb-4">{row.heading}</h3>
-                <p className="text-[#4A4A5E] leading-relaxed mb-4">{row.body}</p>
-                <ul className="flex flex-col gap-2">
-                  {row.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2 text-sm text-[#4A4A5E]">
-                      <CheckCircle size={16} className="text-[#C8962E] flex-shrink-0 mt-0.5" />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
+      </div>
+
+      {/* 3-col factory stats */}
+      <div className="container-site py-16">
+        <div className="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x" style={{ borderColor: 'var(--border)' }}>
+          {[
+            {
+              img: '/assets/images/factory-qc.png',
+              title: 'Three-Stage QC',
+              body: 'Every batch passes incoming fabric inspection, in-line checks, and final audit before shipment. Defect rate below 0.3%.',
+            },
+            {
+              img: '/assets/images/factory-swatches.png',
+              title: '600+ Designs / Year',
+              body: 'Our in-house design team releases new colourways and patterns every season — all available for OEM private label.',
+            },
+            {
+              img: '/assets/images/factory-warehouse.png',
+              title: 'Ready-Stock & Made-to-Order',
+              body: 'Keep 200+ SKUs in stock for fast turnaround. Or place a custom order — sample in 7 days, bulk in 25–35 days.',
+            },
+          ].map((col, i) => (
+            <div key={i} className="p-8 md:p-10">
+              <div className="overflow-hidden mb-6" style={{ borderRadius: '2px' }}>
+                <img src={col.img} alt={col.title} className="w-full object-cover" style={{ height: '220px', objectPosition: 'center' }} />
               </div>
-              <div className={row.imageLeft ? 'md:order-1' : ''}>
-                <div className="rounded-xl overflow-hidden border border-[#DDE0E5] shadow-sm">
-                  <img src={row.image} alt={row.imageAlt} className="w-full h-auto object-cover" loading="lazy" />
-                </div>
-              </div>
+              <h3 className="serif text-2xl mb-3">{col.title}</h3>
+              <p style={{ fontSize: '14px', color: 'var(--espresso-light)', lineHeight: 1.75 }}>{col.body}</p>
             </div>
           ))}
         </div>

@@ -4,14 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: '#0A1F3F',
-        'navy-light': '#132D56',
+        cream: '#F8F4EF',
+        'cream-2': '#EBE2D5',
+        'cream-3': '#F2ECE2',
+        espresso: '#2B2522',
+        'espresso-light': '#4A403A',
+        muted: '#8C7B70',
+        border: '#DDD5C8',
         gold: '#C8962E',
-        'gold-hover': '#B0841F',
-        'gold-light': '#F5E6C8',
-        surface: '#FFFFFF',
-        muted: '#7B7B8B',
-        'muted-on-navy': '#8B95A8',
+      },
+      fontFamily: {
+        serif: ['Cormorant Garamond', 'EB Garamond', 'Georgia', 'serif'],
+        sans: ['Jost', '-apple-system', 'sans-serif'],
       },
     },
   },

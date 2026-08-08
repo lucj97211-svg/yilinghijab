@@ -9,11 +9,12 @@ import AboutPage from './pages/AboutPage';
 import CustomOEMPage from './pages/CustomOEMPage';
 import FAQPage from './pages/FAQPage';
 import ContactPage from './pages/ContactPage';
+import BlogPage from './pages/BlogPage';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-[#F7F8FA]">
+      <div className="min-h-screen flex flex-col" style={{ background: 'var(--cream)' }}>
         <Header />
         <main className="flex-grow">
           <Routes>
@@ -23,6 +24,7 @@ function App() {
             <Route path="/custom-oem" element={<CustomOEMPage />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/blog" element={<BlogPage />} />
           </Routes>
         </main>
         <Footer />

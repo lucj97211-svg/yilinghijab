@@ -1,48 +1,63 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Play } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden" style={{ backgroundColor: 'var(--brand-navy)' }} data-component="hero-section">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(200,150,46,0.1) 2px, rgba(200,150,46,0.1) 4px)',
-        }} />
-      </div>
-      <div className="container-site relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[520px] md:min-h-[600px] py-16">
-          <div className="text-white order-2 lg:order-1">
-            <p className="text-xs tracking-[0.08em] uppercase font-medium text-[#C8962E] mb-4">
-              EST. 2008 — Yiwu, China
-            </p>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.02em] leading-[1.1] mb-6">
-              Premium Hijab Manufacturing<br />
-              <span className="text-[#C8962E]">for Global Wholesale</span>
+    <section style={{ background: 'var(--cream)' }} data-component="hero">
+      <div className="container-site">
+        <div className="grid md:grid-cols-2 gap-0 items-center min-h-[88vh] py-16 md:py-0">
+          {/* Left: text */}
+          <div className="flex flex-col justify-center pr-0 md:pr-16 order-2 md:order-1 pt-10 md:pt-0">
+            <p className="eyebrow mb-6">Direct from Factory · Yiwu, China</p>
+            <h1
+              className="mb-6"
+              style={{ fontSize: 'clamp(2.8rem, 6vw, 5rem)', fontWeight: 400, lineHeight: 1.08, letterSpacing: '-0.01em' }}
+            >
+              The fabric behind<br />
+              <em style={{ fontStyle: 'italic' }}>a million scarves.</em>
             </h1>
-            <p className="text-base md:text-lg text-[#E2E5EB] leading-relaxed mb-8 max-w-lg">
-              16 years of expertise. 200+ skilled workers. 600+ new designs every year.
-              Ship directly from our Yiwu factory to your warehouse.
+            <p style={{ color: 'var(--espresso-light)', fontSize: '16px', lineHeight: 1.75, maxWidth: '420px' }} className="mb-10">
+              16 years of manufacturing premium hijabs for wholesalers and boutiques across 50+ countries.
+              MOQ 100 pcs. OEM welcome.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact" className="btn-gold !text-base !py-3.5 !px-8">
-                Request Quotation
-              </Link>
-              <a href="#factory-video" className="btn-outline-white !text-base !py-3.5 !px-8">
-                <Play size={18} /> Watch Factory Tour
-              </a>
+            <div className="flex flex-wrap gap-4">
+              <Link to="/products" className="btn-espresso">Shop Wholesale</Link>
+              <Link to="/custom-oem" className="btn-outline">Custom / OEM</Link>
+            </div>
+
+            {/* Trust row */}
+            <div className="flex flex-wrap gap-6 mt-12 pt-10" style={{ borderTop: '1px solid var(--border)' }}>
+              {[
+                { val: '16+', label: 'Years' },
+                { val: '500K+', label: 'Pcs / Month' },
+                { val: '50+', label: 'Countries' },
+                { val: '200+', label: 'Workers' },
+              ].map(m => (
+                <div key={m.val}>
+                  <p className="serif" style={{ fontSize: '2rem', fontWeight: 500, color: 'var(--espresso)', lineHeight: 1 }}>{m.val}</p>
+                  <p className="eyebrow mt-1">{m.label}</p>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl border border-[#132D56]">
+
+          {/* Right: editorial image stack */}
+          <div className="relative order-1 md:order-2 flex justify-center md:justify-end">
+            <div className="relative w-full max-w-sm md:max-w-none">
               <img
-                src="/assets/images/hero-factory-banner.png"
-                alt="Modern textile factory floor in Yiwu"
-                className="w-full h-auto object-cover"
+                src="/assets/images/model-chiffon.png"
+                alt="Premium chiffon hijab model"
+                className="w-full object-cover"
+                style={{ maxHeight: '85vh', objectPosition: 'top' }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F3F]/60 to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-white text-xs font-medium opacity-80">Our Manufacturing Facility — Yiwu, Zhejiang</p>
+              {/* Floating badge */}
+              <div
+                className="absolute bottom-8 left-0 md:-left-12 p-5"
+                style={{ background: 'var(--espresso)', color: 'var(--cream)', minWidth: '190px' }}
+              >
+                <p className="eyebrow mb-1" style={{ color: 'var(--gold)' }}>Factory Direct</p>
+                <p className="serif text-2xl" style={{ color: 'var(--cream)' }}>From $1.20/pc</p>
+                <p style={{ fontSize: '12px', opacity: 0.7, marginTop: '4px' }}>MOQ 100 pieces</p>
               </div>
             </div>
           </div>

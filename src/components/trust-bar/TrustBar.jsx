@@ -1,25 +1,24 @@
 import React from 'react';
 
-const metrics = [
-  { value: '16+', label: 'Years Experience' },
-  { value: '200+', label: 'Skilled Workers' },
-  { value: '600+', label: 'Designs per Year' },
-  { value: '50+', label: 'Export Countries' },
+const items = [
+  '★★★★★  500,000+ pcs produced monthly',
+  'Free pre-production samples',
+  'SGS · ISO 9001 certified',
+  'Ships to 50+ countries',
 ];
 
 export default function TrustBar() {
   return (
-    <section className="py-12" style={{ background: 'var(--brand-gold-light)' }} data-component="trust-bar">
-      <div className="container-site">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {metrics.map((m) => (
-            <div key={m.label} className="px-4">
-              <p className="text-3xl md:text-4xl font-bold text-[#C8962E] tracking-[-0.02em] mb-1">{m.value}</p>
-              <p className="text-sm text-[#4A4A5E] font-medium">{m.label}</p>
-            </div>
+    <div style={{ background: 'var(--espresso)', color: 'var(--cream)' }} data-component="trust-bar">
+      <div className="container-site py-4">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-12">
+          {items.map((item, i) => (
+            <span key={i} className="eyebrow" style={{ color: 'var(--cream)', opacity: 0.9, letterSpacing: '0.16em' }}>
+              {item}
+            </span>
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
