@@ -45,8 +45,8 @@ export default function Hero() {
           <div className="relative order-1 md:order-2 flex justify-center md:justify-end">
             <div className="relative w-full max-w-sm md:max-w-none">
               <img
-                src="/assets/images/model-chiffon.png"
-                alt="Premium chiffon hijab model"
+                src="/assets/images/model-chiffon.webp"
+                alt="Model wearing premium chiffon hijab from Yiling wholesale collection"
                 className="w-full object-cover"
                 style={{ maxHeight: '85vh', objectPosition: 'top' }}
               />

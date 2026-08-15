@@ -3,68 +3,132 @@ import { Link } from 'react-router-dom';
 
 const cols = [
   {
-    title: 'Shop',
+    title: 'SHOP',
     links: [
-      { label: 'Chiffon Hijab', to: '/products' },
-      { label: 'Cotton Hijab', to: '/products' },
-      { label: 'Jersey Hijab', to: '/products' },
+      { label: 'Hijabs', to: '/products' },
+      { label: 'Chiffon', to: '/products' },
+      { label: 'Jersey & Modal', to: '/products' },
+      { label: 'Satin', to: '/products' },
       { label: 'Custom / OEM', to: '/custom-oem' },
     ],
   },
   {
-    title: 'Company',
+    title: 'EXPLORE',
     links: [
-      { label: 'About Us', to: '/about' },
-      { label: 'Factory Tour', to: '/about' },
-      { label: 'Certifications', to: '/about' },
-      { label: 'Blog', to: '/blog' },
-      { label: 'FAQ', to: '/faq' },
+      { label: 'New to Wholesale', to: '/contact' },
+      { label: 'Styling Guide', to: '/styling-guide' },
+      { label: 'Blog & Journal', to: '/blog' },
+      { label: 'Reviews', to: '/reviews' },
     ],
   },
   {
-    title: 'Contact',
+    title: 'THE HOUSE',
     links: [
-      { label: 'Get a Quote', to: '/contact' },
-      { label: 'WhatsApp', href: 'https://wa.me/8615088248404' },
-      { label: 'peri@wennuanfactory.com', href: 'mailto:peri@wennuanfactory.com' },
+      { label: 'About Yiling', to: '/about' },
+      { label: 'Contact', to: '/contact' },
+      { label: 'Reviews', to: '/reviews' },
+    ],
+  },
+  {
+    title: 'CARE',
+    links: [
+      { label: 'Shipping', to: '/shipping' },
+      { label: 'Returns', to: '/returns' },
+      { label: 'FAQ', to: '/faq' },
+      { label: 'Contact us', to: '/contact' },
     ],
   },
 ];
 
 export default function Footer() {
   return (
-    <footer style={{ background: 'var(--espresso)', color: 'var(--cream)' }}>
-      <div className="container-site pt-16 pb-10">
-        {/* Top */}
-        <div className="grid md:grid-cols-4 gap-12 mb-16 pb-16" style={{ borderBottom: '1px solid rgba(248,244,239,0.12)' }}>
+    <footer style={{ background: 'var(--espresso)' }}>
+      {/* Newsletter */}
+      <div style={{ borderBottom: '1px solid rgba(248,244,239,0.1)' }}>
+        <div className="container-site py-14 text-center" style={{ maxWidth: '520px' }}>
+          <p className="eyebrow mb-3" style={{ color: 'rgba(248,244,239,0.45)', fontSize: '10px' }}>FROM OUR FACTORY TO YOURS</p>
+          <h3 className="serif mb-3" style={{ color: 'var(--cream)', fontSize: '1.6rem' }}>Stay ahead of the season.</h3>
+          <p style={{ fontSize: '13px', color: 'rgba(248,244,239,0.55)', lineHeight: 1.75, marginBottom: '24px' }}>
+            New fabric drops, trend reports, and wholesale pricing — delivered to your inbox.
+          </p>
+          <form className="flex max-w-xs mx-auto" onSubmit={e => e.preventDefault()}>
+            <input type="email" placeholder="Email address"
+              className="flex-1 px-4 py-3 text-sm"
+              style={{ background: 'rgba(248,244,239,0.08)', border: '1px solid rgba(248,244,239,0.2)', borderRight: 'none', outline: 'none', color: 'var(--cream)', fontFamily: "'Jost',sans-serif" }} />
+            <button type="submit" className="eyebrow px-5 py-3"
+              style={{ background: 'var(--cream)', color: 'var(--espresso)', border: 'none', cursor: 'pointer', fontSize: '11px' }}>
+              JOIN
+            </button>
+          </form>
+          <p style={{ fontSize: '11px', color: 'rgba(248,244,239,0.3)', marginTop: '10px' }}>Unsubscribe anytime. We'll only ever send the good stuff.</p>
+        </div>
+      </div>
+
+      {/* Main footer */}
+      <div className="container-site pt-14 pb-10">
+        <div className="grid md:grid-cols-5 gap-10 mb-14 pb-14" style={{ borderBottom: '1px solid rgba(248,244,239,0.1)' }}>
           {/* Brand */}
-          <div>
-            <p className="serif text-3xl mb-4" style={{ color: 'var(--cream)', letterSpacing: '0.14em' }}>YILING<span style={{ color: 'var(--gold)' }}>®</span></p>
-            <p style={{ fontSize: '13px', color: 'rgba(248,244,239,0.55)', lineHeight: 1.75 }}>
-              Premium hijab manufacturer.<br />Yiwu, Zhejiang, China.<br />Est. 2008.
+          <div className="md:col-span-1">
+            <p className="serif mb-4" style={{ color: 'var(--cream)', fontSize: '1.6rem', letterSpacing: '0.14em' }}>
+              YILING<span style={{ color: 'var(--gold)' }}>®</span>
             </p>
+            <p style={{ fontSize: '13px', color: 'rgba(248,244,239,0.45)', lineHeight: 1.75, marginBottom: '20px' }}>
+              Considered hijabs and wholesale essentials, crafted to be lived in — manufactured in Yiwu since 2008.
+            </p>
+            {/* Social icons */}
+            <div className="flex gap-3 flex-wrap">
+              {[
+                { label: 'Instagram', href: 'https://www.instagram.com/yilinghijab/', icon: (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                  </svg>
+                )},
+                { label: 'TikTok', href: 'https://www.tiktok.com/@yilinghijab', icon: (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
+                  </svg>
+                )},
+                { label: 'Facebook', href: 'https://www.facebook.com/yilinghijab', icon: (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                  </svg>
+                )},
+                { label: 'YouTube', href: 'https://www.youtube.com/@yilinghijab', icon: (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                    <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--espresso)"/>
+                  </svg>
+                )},
+              ].map(({ label, href, icon }) => (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer"
+                  aria-label={label}
+                  style={{
+                    width: '34px', height: '34px', border: '1px solid rgba(248,244,239,0.2)',
+                    borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    color: 'rgba(248,244,239,0.6)', textDecoration: 'none', transition: 'all 0.2s',
+                  }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(248,244,239,0.7)'; e.currentTarget.style.color = 'var(--cream)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(248,244,239,0.2)'; e.currentTarget.style.color = 'rgba(248,244,239,0.6)'; }}
+                >
+                  {icon}
+                </a>
+              ))}
+            </div>
           </div>
 
-          {/* Link cols */}
+          {/* Cols */}
           {cols.map(col => (
             <div key={col.title}>
-              <p className="eyebrow mb-5" style={{ color: 'rgba(248,244,239,0.45)' }}>{col.title}</p>
+              <p className="eyebrow mb-5" style={{ color: 'rgba(248,244,239,0.35)', fontSize: '10px' }}>{col.title}</p>
               <ul className="flex flex-col gap-3">
                 {col.links.map(l => (
                   <li key={l.label}>
-                    {l.href ? (
-                      <a href={l.href} target="_blank" rel="noopener noreferrer"
-                        style={{ fontSize: '13px', color: 'rgba(248,244,239,0.7)', textDecoration: 'none' }}
-                        className="hover:text-white transition-colors">
-                        {l.label}
-                      </a>
-                    ) : (
-                      <Link to={l.to}
-                        style={{ fontSize: '13px', color: 'rgba(248,244,239,0.7)', textDecoration: 'none' }}
-                        className="hover:text-white transition-colors">
-                        {l.label}
-                      </Link>
-                    )}
+                    <Link to={l.to} style={{ fontSize: '13px', color: 'rgba(248,244,239,0.6)', textDecoration: 'none' }}
+                      className="hover:text-white transition-colors">
+                      {l.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -72,14 +136,19 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Bottom */}
-        <div className="flex flex-col md:flex-row justify-between gap-3">
-          <p style={{ fontSize: '12px', color: 'rgba(248,244,239,0.35)' }}>
+        {/* Bottom bar */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <p style={{ fontSize: '11px', color: 'rgba(248,244,239,0.25)' }}>
             © {new Date().getFullYear()} Yiling Hijab — Yiwu Yiling Clothing Co., Ltd. All rights reserved.
           </p>
-          <p style={{ fontSize: '12px', color: 'rgba(248,244,239,0.35)' }}>
-            Yiwu City, Zhejiang Province, China
+          <p className="eyebrow" style={{ color: 'rgba(248,244,239,0.25)', fontSize: '10px', letterSpacing: '0.22em' }}>
+            QUALITY IS THE MEANS TO ALL TRUST
           </p>
+          <div className="flex gap-4">
+            {['Privacy Policy', 'Terms of Service'].map(label => (
+              <span key={label} style={{ fontSize: '11px', color: 'rgba(248,244,239,0.25)', cursor: 'pointer' }}>{label}</span>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

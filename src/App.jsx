@@ -1,37 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-import WhatsAppFloat from './components/whatsapp/WhatsAppFloat';
-import HomePage from './pages/HomePage';
-import ProductsPage from './pages/ProductsPage';
-import AboutPage from './pages/AboutPage';
-import CustomOEMPage from './pages/CustomOEMPage';
-import FAQPage from './pages/FAQPage';
-import ContactPage from './pages/ContactPage';
-import BlogPage from './pages/BlogPage';
+import { BrowserRouter } from 'react-router-dom';
+import AppShell from './AppShell';
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col" style={{ background: 'var(--cream)' }}>
-        <Header />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/custom-oem" element={<CustomOEMPage />} />
-            <Route path="/faq" element={<FAQPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-          </Routes>
-        </main>
-        <Footer />
-        <WhatsAppFloat />
-      </div>
-    </Router>
+    <BrowserRouter>
+      <AppShell />
+    </BrowserRouter>
   );
 }
-
-export default App;

@@ -8,9 +8,9 @@ export default function VideoSection() {
         <p className="text-xs tracking-[0.08em] uppercase font-medium text-[#C8962E] mb-4">Virtual Tour</p>
         <h2 className="text-2xl md:text-3xl font-semibold tracking-[-0.02em] text-white mb-6">See Our Factory</h2>
         <div className="max-w-2xl mx-auto relative rounded-xl overflow-hidden shadow-2xl group cursor-pointer">
-          <img
-            src="/assets/images/factory-video-thumbnail.png"
-            alt="Factory production floor"
+          <img loading="lazy" decoding="async"
+            src="/assets/images/factory-video-thumbnail.webp"
+            alt="Hijab manufacturing production floor at Yiling factory in Yiwu China"
             className="w-full h-auto object-cover"
           />
           <div className="absolute inset-0 bg-[#0A1F3F]/40 group-hover:bg-[#0A1F3F]/50 transition-colors flex items-center justify-center">

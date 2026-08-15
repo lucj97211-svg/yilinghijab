@@ -36,9 +36,9 @@ export default function ContactInfo() {
         </div>
       </div>
       <div className="bg-white rounded-xl overflow-hidden border border-[#DDE0E5] shadow-sm">
-        <img
-          src="/assets/images/yiwu-map-placeholder.png"
-          alt="Yiwu location map"
+        <img loading="lazy" decoding="async"
+          src="/assets/images/yiwu-map-placeholder.webp"
+          alt="Yiling hijab factory location in Yiwu, Zhejiang Province, China"
           className="w-full h-auto"
         />
         <div className="p-4 text-center">

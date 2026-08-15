@@ -5,9 +5,9 @@ export default function WhyChooseRow() {
     <section data-component="factory-story" style={{ background: 'var(--cream-2)' }}>
       {/* Factory floor full-bleed */}
       <div className="relative w-full overflow-hidden" style={{ maxHeight: '560px' }}>
-        <img
-          src="/assets/images/factory-floor.png"
-          alt="Yiling factory production floor"
+        <img loading="lazy" decoding="async"
+          src="/assets/images/factory-floor.webp"
+          alt="Wholesale hijab factory production floor, 200+ workers in Yiwu China"
           className="w-full object-cover"
           style={{ maxHeight: '560px' }}
         />
@@ -27,24 +27,24 @@ export default function WhyChooseRow() {
         <div className="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x" style={{ borderColor: 'var(--border)' }}>
           {[
             {
-              img: '/assets/images/factory-qc.png',
+              img: '/assets/images/factory-qc.webp',
               title: 'Three-Stage QC',
               body: 'Every batch passes incoming fabric inspection, in-line checks, and final audit before shipment. Defect rate below 0.3%.',
             },
             {
-              img: '/assets/images/factory-swatches.png',
+              img: '/assets/images/factory-swatches.webp',
               title: '600+ Designs / Year',
               body: 'Our in-house design team releases new colourways and patterns every season — all available for OEM private label.',
             },
             {
-              img: '/assets/images/factory-warehouse.png',
+              img: '/assets/images/factory-warehouse.webp',
               title: 'Ready-Stock & Made-to-Order',
               body: 'Keep 200+ SKUs in stock for fast turnaround. Or place a custom order — sample in 7 days, bulk in 25–35 days.',
             },
           ].map((col, i) => (
             <div key={i} className="p-8 md:p-10">
               <div className="overflow-hidden mb-6" style={{ borderRadius: '2px' }}>
-                <img src={col.img} alt={col.title} className="w-full object-cover" style={{ height: '220px', objectPosition: 'center' }} />
+                <img loading="lazy" decoding="async" src={col.img} alt={col.title} className="w-full object-cover" style={{ height: '220px', objectPosition: 'center' }} />
               </div>
               <h3 className="serif text-2xl mb-3">{col.title}</h3>
               <p style={{ fontSize: '14px', color: 'var(--espresso-light)', lineHeight: 1.75 }}>{col.body}</p>

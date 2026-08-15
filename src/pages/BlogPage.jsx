@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import PageHeader from '../components/page-header/PageHeader';
 import FooterCTA from '../components/cta/FooterCTA';
 import posts from '../data/posts';
+import Seo from '../components/seo/Seo';
 
 function PostCard({ post }) {
   return (
-    <article className="group" data-component="post-card">
+    <Link to={`/blog/${post.slug}`} className="group block" data-component="post-card">
       {/* Cover */}
       <div className="overflow-hidden mb-5" style={{ background: 'var(--cream-2)' }}>
-        <img
+        <img loading="lazy" decoding="async"
           src={post.cover}
           alt={post.title}
           className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -35,13 +36,18 @@ function PostCard({ post }) {
       <span className="eyebrow" style={{ color: 'var(--espresso)', borderBottom: '1px solid var(--espresso)', paddingBottom: '2px', cursor: 'pointer' }}>
         Read More →
       </span>
-    </article>
+    </Link>
   );
 }
 
 export default function BlogPage() {
   return (
     <div data-component="blog-page">
+      <Seo
+        title="Hijab Wholesale & Sourcing Guides | Yiling Hijab Blog"
+        description="Practical sourcing guides for hijab importers and modest-fashion brands. MOQ strategy, fabric comparison, import duty, OEM process and market-specific buying advice."
+        path="/blog"
+      />
       <PageHeader title="Blog & Resources" breadcrumbs={[{ label: 'Blog' }]} />
 
       <section className="section-padding" style={{ background: 'var(--cream)' }}>

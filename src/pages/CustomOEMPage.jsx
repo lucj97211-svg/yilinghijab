@@ -4,6 +4,7 @@ import ProcessStep from '../components/process/ProcessStep';
 import FooterCTA from '../components/cta/FooterCTA';
 import { Link } from 'react-router-dom';
 import { Palette, Scissors, Ruler, Package, Printer, Shirt } from 'lucide-react';
+import Seo from '../components/seo/Seo';
 
 const options = [
   { icon: Palette, title: 'Fabric Selection', desc: 'Choose from chiffon, cotton, linen, jersey, crinkle, or custom blends in any color.' },
@@ -17,6 +18,11 @@ const options = [
 export default function CustomOEMPage() {
   return (
     <div data-component="custom-oem-page">
+      <Seo
+        title="OEM & Private Label Hijab Manufacturer | Custom Production"
+        description="Custom hijab manufacturing from a Yiwu factory. Your fabric, colour, size, labels and packaging. Samples in 7 days, bulk in 15-25 days. Full OEM and ODM service."
+        path="/custom-oem"
+      />
       <PageHeader title="Custom / OEM Manufacturing" breadcrumbs={[{ label: 'Custom / OEM' }]} />
 
       <section className="section-padding">
