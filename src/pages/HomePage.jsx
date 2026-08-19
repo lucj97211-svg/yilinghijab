@@ -65,9 +65,10 @@ export default function HomePage() {
         <div className="container-site py-5">
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 text-center">
             {[
-              '★★★★★  200+ verified buyers',
-              'Free samples available',
-              'Factory-direct · since 2008',
+              '800+ orders shipped globally',
+              '★★★★★  4.9 / 5 · 283 verified reviews',
+              'Over $100K monthly order volume',
+              'Factory-direct · 3 years in wholesale',
             ].map((t, i) => (
               <span key={i} className="eyebrow" style={{ color: 'var(--espresso-light)' }}>{t}</span>
             ))}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import FooterCTA from '../components/cta/FooterCTA';
-import Seo, { articleSchema, breadcrumbSchema } from '../components/seo/Seo';
+import Seo, { articleSchema, breadcrumbSchema, faqSchema } from '../components/seo/Seo';
 import posts from '../data/posts';
 
 function Block({ block }) {
@@ -45,6 +45,7 @@ export default function BlogPostPage() {
             { name: 'Blog', path: '/blog' },
             { name: post.title, path: `/blog/${post.slug}` },
           ]),
+          ...(post.faq ? [faqSchema(post.faq)] : []),
         ]}
       />
 
@@ -84,6 +85,28 @@ export default function BlogPostPage() {
         {post.body.map((block, i) => (
           <Block key={i} block={block} />
         ))}
+
+        {/* FAQ block */}
+        {post.faq && post.faq.length > 0 && (
+          <div className="mt-14">
+            <h2 className="serif" style={{ fontSize: 'clamp(1.4rem,3vw,1.9rem)', marginBottom: '24px', lineHeight: 1.3 }}>
+              Frequently Asked Questions
+            </h2>
+            <div style={{ borderTop: '1px solid var(--border)' }}>
+              {post.faq.map((item, i) => (
+                <details key={i} style={{ borderBottom: '1px solid var(--border)', padding: '18px 0' }}>
+                  <summary style={{ fontSize: '15px', fontWeight: 500, color: 'var(--espresso)', cursor: 'pointer', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    {item.q}
+                    <span style={{ fontSize: '20px', color: 'var(--muted)', fontWeight: 300, marginLeft: '16px', flexShrink: 0 }}>+</span>
+                  </summary>
+                  <p style={{ fontSize: '14px', color: 'var(--espresso-light)', lineHeight: 1.8, marginTop: '12px', paddingRight: '32px' }}>
+                    {item.a}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* CTA inside article */}
         <div className="mt-14 p-8 text-center" style={{ background: 'var(--cream-2)', border: '1px solid var(--border)' }}>
