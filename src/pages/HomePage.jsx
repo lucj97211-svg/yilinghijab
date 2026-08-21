@@ -67,7 +67,7 @@ export default function HomePage() {
             {[
               '800+ orders shipped globally',
               '★★★★★  4.9 / 5 · 283 verified reviews',
-              'Over $100K monthly order volume',
+              'Buyers in USA · UK · Canada · Indonesia · Australia · Europe',
               'Factory-direct · 3 years in wholesale',
             ].map((t, i) => (
               <span key={i} className="eyebrow" style={{ color: 'var(--espresso-light)' }}>{t}</span>
