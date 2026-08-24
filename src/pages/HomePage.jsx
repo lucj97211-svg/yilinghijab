@@ -92,7 +92,7 @@ export default function HomePage() {
             ].map((cat, i) => (
               <Link to={cat.link} key={i} className="group relative overflow-hidden block" style={{ textDecoration: 'none' }}>
                 <div style={{ height: '220px', overflow: 'hidden', background: 'var(--cream-2)' }}>
-                  <img loading="lazy" decoding="async" src={cat.img} alt={cat.label} className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                  <img loading="lazy" decoding="async" src={cat.img} alt={cat.label} className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <div className="pt-3">
                   <p className="serif text-lg" style={{ color: 'var(--espresso)' }}>{cat.label}</p>
