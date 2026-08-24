@@ -44,7 +44,7 @@ const products = [
     size: '180 x 70 cm',
     moq: '100 pcs',
     price: '$4.20',
-    image: '/assets/images/material-jersey.webp',
+    image: '/assets/images/product-jersey-storm-grey.webp',
     gallery: [
       '/assets/images/material-jersey.webp',
       '/assets/images/detail-jersey.webp',
@@ -79,7 +79,7 @@ const products = [
     size: '180 x 70 cm',
     moq: '100 pcs',
     price: '$4.20',
-    image: '/assets/images/material-jersey.webp',
+    image: '/assets/images/product-jersey-deep-navy.webp',
     gallery: [
       '/assets/images/material-jersey.webp',
       '/assets/images/detail-jersey.webp',
