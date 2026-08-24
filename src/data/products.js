@@ -114,7 +114,7 @@ const products = [
     size: '180 x 75 cm',
     moq: '100 pcs',
     price: '$4.80',
-    image: '/assets/images/material-satin.webp',
+    image: '/assets/images/product-satin-champagne-gold.webp',
     gallery: [
       '/assets/images/material-satin.webp',
       '/assets/images/detail-satin.webp',
@@ -149,7 +149,7 @@ const products = [
     size: '180 x 75 cm',
     moq: '100 pcs',
     price: '$4.80',
-    image: '/assets/images/material-satin.webp',
+    image: '/assets/images/product-satin-dusty-rose.webp',
     gallery: [
       '/assets/images/material-satin.webp',
       '/assets/images/detail-satin.webp',
@@ -184,7 +184,7 @@ const products = [
     size: '180 x 75 cm',
     moq: '100 pcs',
     price: '$4.80',
-    image: '/assets/images/material-satin.webp',
+    image: '/assets/images/product-satin-midnight-plum.webp',
     gallery: [
       '/assets/images/material-satin.webp',
       '/assets/images/detail-satin.webp',
