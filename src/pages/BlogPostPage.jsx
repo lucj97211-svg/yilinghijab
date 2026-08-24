@@ -82,9 +82,45 @@ export default function BlogPostPage() {
 
       {/* Body */}
       <article className="container-site" style={{ maxWidth: '760px', paddingTop: '48px', paddingBottom: '64px' }}>
+
+        {/* Summary Box */}
+        {post.summary && (
+          <div className="mb-10 p-6" style={{ background: 'var(--cream-2)', borderLeft: '3px solid var(--gold)' }}>
+            <p className="eyebrow mb-3" style={{ color: 'var(--gold)' }}>Quick Summary</p>
+            <p style={{ fontSize: '15px', color: 'var(--espresso-light)', lineHeight: 1.85 }}>{post.summary}</p>
+          </div>
+        )}
+
         {post.body.map((block, i) => (
           <Block key={i} block={block} />
         ))}
+
+        {/* Comparison Table */}
+        {post.comparisonTable && (
+          <div className="mt-12 mb-4" style={{ overflowX: 'auto' }}>
+            <h2 className="serif mb-6" style={{ fontSize: 'clamp(1.4rem,3vw,1.9rem)', lineHeight: 1.3 }}>
+              {post.comparisonTable.headers[1]} vs {post.comparisonTable.headers[2]}: At a Glance
+            </h2>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
+              <thead>
+                <tr style={{ background: 'var(--espresso)', color: 'var(--cream)' }}>
+                  {post.comparisonTable.headers.map((h, i) => (
+                    <th key={i} style={{ padding: '12px 16px', textAlign: 'left', fontFamily: "'Jost', sans-serif", fontWeight: 500, letterSpacing: '0.05em' }}>{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {post.comparisonTable.rows.map((row, i) => (
+                  <tr key={i} style={{ background: i % 2 === 0 ? 'var(--cream)' : 'var(--cream-2)', borderBottom: '1px solid var(--border)' }}>
+                    {row.map((cell, j) => (
+                      <td key={j} style={{ padding: '11px 16px', color: j === 0 ? 'var(--espresso)' : 'var(--espresso-light)', fontWeight: j === 0 ? 500 : 400 }}>{cell}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
 
         {/* FAQ block */}
         {post.faq && post.faq.length > 0 && (
