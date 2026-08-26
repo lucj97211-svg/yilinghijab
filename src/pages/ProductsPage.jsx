@@ -27,7 +27,7 @@ export default function ProductsPage() {
     <div data-component="products-page">
       <Seo
         title="Wholesale Hijabs — 18 Styles, MOQ 100 pcs | Yiling Hijab"
-        description="Browse 18 wholesale hijab styles across six fabric families. Premium jersey, lustre satin, chiffon, bamboo modal, combed cotton and crinkle georgette. Free samples available."
+        description="Browse 18 wholesale hijab styles across six fabric families: premium jersey, lustre satin, chiffon, bamboo modal, combed cotton and crinkle georgette."
         path="/products"
       />
       <PageHeader title="Our Products" breadcrumbs={[{ label: 'Products' }]} />

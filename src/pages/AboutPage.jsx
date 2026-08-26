@@ -16,7 +16,7 @@ export default function AboutPage() {
     <div style={{ background: 'var(--cream)' }}>
       <Seo
         title="About Our Hijab Factory — 16 Years in Yiwu | Yiling Hijab"
-        description="Yiwu Yiling Clothing Co., Ltd. has manufactured hijabs since 2008. 200+ workers, 500,000 pcs monthly capacity, OEKO-TEX and SGS certified, exporting to 50+ countries."
+        description="Yiwu Yiling Clothing Co., Ltd. has manufactured hijabs since 2008. 200+ workers, 500,000 pcs monthly capacity, OEKO-TEX and SGS certified."
         path="/about"
       />
       {/* OUR PHILOSOPHY */}

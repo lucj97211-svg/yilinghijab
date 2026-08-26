@@ -33,8 +33,8 @@ export default function BlogPostPage() {
   return (
     <div data-component="blog-post-page">
       <Seo
-        title={`${post.title} | Yiling Hijab`}
-        description={post.excerpt}
+        title={post.metaTitle ? `${post.metaTitle} | Yiling` : `${post.title} | Yiling Hijab`}
+        description={post.metaDescription || post.excerpt}
         path={`/blog/${post.slug}`}
         image={post.cover}
         type="article"

@@ -23,8 +23,8 @@ export default function ProductDetailPage() {
   return (
     <div data-component="product-detail-page">
       <Seo
-        title={`${product.name} ${product.color} — Wholesale MOQ 100 pcs | Yiling Hijab`}
-        description={`${product.material} hijab in ${product.color}, ${product.weight}, ${product.size}. Factory-direct wholesale from ${product.price}/pc, MOQ 100 pieces. OEM and private label available.`}
+        title={`${product.name} ${product.color} — Wholesale | Yiling`}
+        description={`${product.material} hijab in ${product.color}, ${product.weight}. Factory-direct from ${product.price}/pc, MOQ 100 pcs. OEM and private label welcome.`}
         path={`/products/${product.slug}`}
         image={product.image}
         type="product"

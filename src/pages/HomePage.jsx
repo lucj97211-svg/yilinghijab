@@ -22,8 +22,8 @@ export default function HomePage() {
   return (
     <main style={{ background: 'var(--cream)' }}>
       <Seo
-        title="Hijab Manufacturer & Wholesale Supplier | Yiling Hijab Factory China"
-        description="Factory-direct hijab wholesale from Yiwu, China. 18 styles in jersey, chiffon, satin, modal and cotton. MOQ 100 pcs, OEM and private label welcome, ships to 50+ countries."
+        title="Hijab Manufacturer & Wholesale Supplier | Yiling"
+        description="Factory-direct hijab wholesale from Yiwu, China. 18 styles in jersey, chiffon, satin, modal and cotton. MOQ 100 pcs, OEM and private label welcome."
         path="/"
         jsonLd={orgSchema()}
       />
