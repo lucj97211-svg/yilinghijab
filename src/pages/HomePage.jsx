@@ -1,23 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import FooterCTA from '../components/cta/FooterCTA';
 import TestimonialCard from '../components/testimonials/TestimonialCard';
-import products from '../data/products';
 import Seo, { orgSchema } from '../components/seo/Seo';
 
-const TABS = ['All', 'Bestsellers', 'New In', 'Chiffon', 'Jersey'];
-
 export default function HomePage() {
-  const [activeTab, setActiveTab] = useState('All');
-
-  const filtered = products.filter(p => {
-    if (activeTab === 'All') return true;
-    if (activeTab === 'Bestsellers') return p.badge === 'BESTSELLER';
-    if (activeTab === 'New In') return p.badge === 'NEW IN';
-    if (activeTab === 'Chiffon') return p.category === 'chiffon' || p.category === 'crinkle';
-    if (activeTab === 'Jersey') return p.category === 'jersey' || p.category === 'modal';
-    return true;
-  });
 
   return (
     <main style={{ background: 'var(--cream)' }}>
@@ -124,74 +111,6 @@ export default function HomePage() {
             <div className="order-1 md:order-2">
               <img loading="lazy" decoding="async" src="/assets/images/starter-flatlay.webp" alt="Wholesale hijab starter sample pack for B2B buyers, MOQ 100 pcs" className="w-full object-cover" style={{ maxHeight: '480px' }} />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PRODUCT GRID ── */}
-      <section className="section-padding" style={{ background: 'var(--cream)' }}>
-        <div className="container-site">
-          <p className="eyebrow mb-3" style={{ color: 'var(--muted)' }}>BELOVED BY BUYERS</p>
-          <div className="flex items-end justify-between mb-8">
-            <h2 className="serif" style={{ fontSize: 'clamp(1.8rem,4vw,3rem)' }}>This season's favourites</h2>
-            <Link to="/products" className="btn-outline hidden md:inline-block">View all</Link>
-          </div>
-
-          {/* Filter tabs */}
-          <div className="flex gap-2 flex-wrap mb-10">
-            {TABS.map(tab => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className="eyebrow px-5 py-2 transition-all"
-                style={{
-                  background: activeTab === tab ? 'var(--espresso)' : 'transparent',
-                  color: activeTab === tab ? 'var(--cream)' : 'var(--muted)',
-                  border: `1px solid ${activeTab === tab ? 'var(--espresso)' : 'var(--border)'}`,
-                  cursor: 'pointer',
-                  fontSize: '11px',
-                }}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-
-          {/* Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-            {filtered.map(p => (
-              <div key={p.id} className="group">
-                <div className="relative overflow-hidden mb-4" style={{ background: 'var(--cream-2)' }}>
-                  {p.badge && (
-                    <span className="absolute top-3 left-3 z-10 eyebrow px-3 py-1"
-                      style={{ background: 'var(--espresso)', color: 'var(--cream)', fontSize: '10px' }}>
-                      {p.badge}
-                    </span>
-                  )}
-                  <img loading="lazy" decoding="async"
-                    src={p.image}
-                    alt={`${p.name} ${p.color}`}
-                    className="w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    style={{ aspectRatio: '3/4' }}
-                  />
-                  <div className="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-4"
-                    style={{ background: 'var(--espresso)' }}>
-                    <Link to="/contact" className="eyebrow block text-center w-full" style={{ color: 'var(--cream)', fontSize: '11px' }}>
-                      REQUEST QUOTE
-                    </Link>
-                  </div>
-                </div>
-                <p className="eyebrow mb-1" style={{ color: 'var(--muted)', fontSize: '10px' }}>{p.material} · {p.color}</p>
-                <p className="serif text-lg mb-1" style={{ color: 'var(--espresso)' }}>{p.name}</p>
-                <div className="flex items-center justify-between">
-                  <span style={{ fontSize: '12px', color: 'var(--muted)' }}>{'★'.repeat(p.stars)} {p.reviews.toLocaleString()}</span>
-                  <span className="eyebrow" style={{ color: 'var(--espresso)', fontSize: '12px' }}>MOQ {p.moq}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-10 md:hidden">
-            <Link to="/products" className="btn-outline">View All Products</Link>
           </div>
         </div>
       </section>
