@@ -529,7 +529,7 @@
       { type: 'p', text: 'If your brand is building an everyday wear range that needs to function across climates, hair types, and activity levels, jersey is the more practical foundation. Its stretch and opacity address the most common customer objections before they arise.' },
       { type: 'p', text: 'Many brands we work with do both: launch with a modal printed hero piece that drives social media attention and brand positioning, then build out a jersey core collection that generates the repeat purchase volume that sustains the business.' },
       { type: 'p', text: 'Starting with MOQ 100 to 200 pieces per colourway across both fabrics allows a brand to test market response before scaling either direction. The development investment is the same; the information return is considerably higher.' },
-      { type: 'p', text: 'If you are developing a premium hijab collection, our team can support fabric selection, printing development, and production solutions from initial sample to bulk delivery.' },
+      { type: 'p', text: 'Brands at the sample stage or ready to scale are welcome to share a brief. Our team will respond with fabric options, print process recommendations, and a production timeline.' },
     ],
   },
   {
@@ -579,7 +579,7 @@
       { type: 'p', text: 'The most common mistake in a first private label order is trying to launch too many SKUs. A debut collection of eight colourways in two fabrics requires capital, content production, and inventory management that most new brands are not ready for. Three to four exclusive colourways in one fabric, developed with full label and packaging, is a more manageable and more focused launch.' },
       { type: 'p', text: 'Start with your hero piece - the one colourway and fabric combination that represents your brand most clearly. Develop it fully, generate content with it, and read the market response before expanding. The second colourway is easier to justify when you have sell-through data from the first.' },
       { type: 'p', text: 'MOQ at 100 to 200 pieces per style keeps initial capital requirement contained while giving you enough product to run a proper launch. Price the product based on landed cost including development fees, freight, and duty, not just the unit cost. Private label product commands a margin premium - use it.' },
-      { type: 'p', text: 'If you are developing a premium hijab collection, our team can support fabric selection, printing development and production solutions.' },
+      { type: 'p', text: 'Whether you are launching a first private label run or expanding an existing collection, our production team can advise on fabric, print process, and packaging from your first inquiry.' },
     ],
   },
   {
@@ -629,7 +629,7 @@
       { type: 'p', text: 'The most useful question a brand can ask a prospective manufacturer is not about price or MOQ. It is: can you show me where the printing happens and who operates the equipment? A manufacturer with genuine in-house capability answers this with a factory visit or a detailed video walkthrough of the print line. A trading company or an outsource coordinator deflects.' },
       { type: 'p', text: 'Ask for wash fastness test reports from previous production runs, not from a spec sheet. Ask whether colour reference data is retained for reorders. Ask who manages labelling and packaging -- and whether they are in the same building as the garment production.' },
       { type: 'p', text: 'The brands that build the strongest supplier relationships are the ones that treat the first order as an audit as much as a purchase. A 100-piece first order that tests the full production process -- sample, revision, bulk, QC report, packaging, delivery accuracy -- tells a brand everything they need to know before committing to scale.' },
-      { type: 'p', text: 'If you are developing a premium hijab collection, our team can support fabric selection, printing development and production solutions.' },
+      { type: 'p', text: 'Brands looking for a manufacturer that treats custom work as the core of the business, rather than an add-on to bulk wholesale, are welcome to get in touch. We are glad to walk through our process in detail.' },
     ],
   },
 ];
