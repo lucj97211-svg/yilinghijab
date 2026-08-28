@@ -5,10 +5,11 @@ const cols = [
   {
     title: 'SHOP',
     links: [
-      { label: 'Hijabs', to: '/products' },
-      { label: 'Chiffon', to: '/products' },
-      { label: 'Jersey & Modal', to: '/products' },
-      { label: 'Satin', to: '/products' },
+      { label: 'All Products', to: '/products' },
+      { label: 'Custom Printed Modal', to: '/products' },
+      { label: 'Jersey Modal', to: '/products' },
+      { label: 'Custom Pantone Modal', to: '/products' },
+      { label: 'Custom Hemming', to: '/products' },
       { label: 'Custom / OEM', to: '/custom-oem' },
     ],
   },
@@ -73,7 +74,7 @@ export default function Footer() {
               YILING<span style={{ color: 'var(--gold)' }}>®</span>
             </p>
             <p style={{ fontSize: '13px', color: 'rgba(248,244,239,0.45)', lineHeight: 1.75, marginBottom: '20px' }}>
-              Considered hijabs and wholesale essentials, crafted to be lived in — manufactured in Yiwu since 2008.
+              Custom printed modal hijab manufacturer — OEM and private label for brands worldwide. Factory-direct from Yiwu since 2021.
             </p>
             {/* Social icons */}
             <div className="flex gap-3 flex-wrap">

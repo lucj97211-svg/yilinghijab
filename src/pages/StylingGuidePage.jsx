@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import Seo from '../components/seo/Seo';
@@ -6,20 +6,20 @@ import Seo from '../components/seo/Seo';
 const filters = ['ALL', 'EVERYDAY DRAPE', 'OCCASION', 'QUICK & EASY', 'LAYERING'];
 
 const videos = [
-  { platform: 'YOUTUBE', title: 'How to wrap a chiffon hijab — everyday style', creator: 'Yiling Hijab · Everyday Drape', url: 'https://www.youtube.com/@culturehijab', category: 'EVERYDAY DRAPE' },
+  { platform: 'YOUTUBE', title: 'How to style a custom printed modal hijab — everyday drape', creator: 'Yiling Hijab · Everyday Drape', url: 'https://www.youtube.com/@culturehijab', category: 'EVERYDAY DRAPE' },
   { platform: 'YOUTUBE', title: 'Three go-to jersey hijab wraps', creator: 'Yiling Hijab · Everyday Drape', url: 'https://www.youtube.com/@culturehijab', category: 'EVERYDAY DRAPE' },
   { platform: 'TIKTOK', title: 'Satin hijab for Eid — step by step', creator: 'Yiling Hijab · Occasion', url: 'https://www.tiktok.com', category: 'OCCASION' },
   { platform: 'YOUTUBE', title: 'Occasion & formal hijab styling guide', creator: 'Yiling Hijab · Occasion', url: 'https://www.youtube.com/@culturehijab', category: 'OCCASION' },
   { platform: 'TIKTOK', title: 'Quick hijab in under 2 minutes — jersey mini', creator: 'Yiling Hijab · Quick & Easy', url: 'https://www.tiktok.com', category: 'QUICK & EASY' },
   { platform: 'INSTAGRAM', title: 'The no-pin wrap tutorial', creator: 'Yiling Hijab · Quick & Easy', url: 'https://www.instagram.com', category: 'QUICK & EASY' },
-  { platform: 'YOUTUBE', title: 'How to layer a chiffon hijab over an underscar', creator: 'Yiling Hijab · Layering', url: 'https://www.youtube.com/@culturehijab', category: 'LAYERING' },
+  { platform: 'YOUTUBE', title: 'How to layer a modal hijab for maximum coverage', creator: 'Yiling Hijab · Layering', url: 'https://www.youtube.com/@culturehijab', category: 'LAYERING' },
   { platform: 'INSTAGRAM', title: 'Full coverage layering with modal', creator: 'Yiling Hijab · Layering', url: 'https://www.instagram.com', category: 'LAYERING' },
 ];
 
 const stylingFAQ = [
-  { q: 'Which hijab fabric is best for beginners?', a: 'Premium Jersey is the easiest fabric to learn on. Its gentle four-way stretch grips itself, so wraps hold their place without constant adjusting, and it drapes evenly with very little practice.' },
-  { q: 'How do I keep my hijab from slipping?', a: 'Start with a foundation: a seamless or full-coverage under scarf gives the fabric something to grip. Grippier fabrics like jersey naturally stay put longer than smooth satin or chiffon.' },
-  { q: 'Which hijab should I recommend for occasions?', a: 'Lustre Satin is the occasion fabric. Its soft sheen photographs beautifully and dresses up an outfit instantly. Pair it with a full-coverage under scarf for a clean base.' },
+  { q: 'Which hijab fabric is best for beginners?', a: 'Jersey modal is the easiest fabric to start with. Its gentle four-way stretch grips naturally, so wraps hold their place without constant adjusting, and the modal blend adds a soft hand feel from the first wear.' },
+  { q: 'How do I keep my hijab from slipping?', a: 'Start with a foundation: a seamless or full-coverage under scarf gives the fabric something to grip. jersey modal naturally stays put longer than smooth woven fabrics.' },
+  { q: 'Which hijab should I recommend for occasions?', a: 'Custom Pantone modal in a deeper colourway is ideal for occasions. The soft sheen of a quality modal dye photographs beautifully and pairs well with a full-coverage under scarf.' },
   { q: 'How should customers care for hijabs?', a: 'Hand wash cold, or machine wash on a gentle cycle inside a mesh bag. Lay flat or hang to dry. Jersey relaxes back to a soft, even drape; satin and chiffon should be kept off high heat.' },
 ];
 
@@ -127,11 +127,11 @@ export default function StylingGuidePage() {
           <p className="eyebrow mb-6" style={{ color: 'var(--muted)' }}>PICK YOUR FABRIC</p>
           <div className="flex gap-3 flex-wrap mb-10">
             {[
-              { label: 'PREMIUM JERSEY', to: '/products' },
+              { label: 'CUSTOM PRINTED MODAL', to: '/products' },
               { label: 'MODAL', to: '/products' },
-              { label: 'LUSTRE SATIN', to: '/products' },
-              { label: 'CHIFFON', to: '/products' },
-              { label: 'COTTON', to: '/products' },
+              { label: 'JERSEY MODAL', to: '/products' },
+              { label: 'PANTONE MODAL', to: '/products' },
+              { label: 'CUSTOM HEMMING', to: '/products' },
             ].map((f, i) => (
               <Link key={i} to={f.to} className="eyebrow px-6 py-3"
                 style={{ border: '1px solid var(--border)', color: 'var(--espresso)', textDecoration: 'none', fontSize: '11px' }}>
@@ -162,7 +162,7 @@ export default function StylingGuidePage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { date: 'JULY 20, 2026', title: 'How to Choose a Wholesale Hijab Supplier', excerpt: 'Key factors every importer should evaluate before placing a bulk hijab order — from MOQ to certifications.', to: '/blog' },
-              { date: 'JULY 10, 2026', title: 'Chiffon vs Jersey: Which Sells Better for Wholesale?', excerpt: 'A practical comparison of the two most popular hijab fabrics for B2B buyers.', to: '/blog' },
+              { date: 'JULY 10, 2026', title: 'Custom Printed vs Pantone Modal: Which Suits Your Brand?', excerpt: 'A practical comparison of the two most popular hijab fabrics for B2B buyers.', to: '/blog' },
               { date: 'JUNE 28, 2026', title: 'OEM Hijab Manufacturing: A Step-by-Step Guide', excerpt: 'Everything you need to know about launching a private-label hijab line.', to: '/blog' },
             ].map((post, i) => (
               <div key={i}>

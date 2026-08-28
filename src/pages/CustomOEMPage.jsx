@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import PageHeader from '../components/page-header/PageHeader';
 import ProcessStep from '../components/process/ProcessStep';
 import FooterCTA from '../components/cta/FooterCTA';
@@ -7,7 +7,7 @@ import { Palette, Scissors, Ruler, Package, Printer, Shirt } from 'lucide-react'
 import Seo from '../components/seo/Seo';
 
 const options = [
-  { icon: Palette, title: 'Fabric Selection', desc: 'Choose from chiffon, cotton, linen, jersey, crinkle, or custom blends in any color.' },
+  { icon: Palette, title: 'Fabric Selection', desc: 'Choose from custom printed modal, jersey modal, or Pantone-matched solid modal in any colourway.' },
   { icon: Printer, title: 'Printing & Pattern', desc: 'Digital printing, screen printing, or custom dyeing with Pantone color matching.' },
   { icon: Ruler, title: 'Size & Cut', desc: 'Standard or custom dimensions. We produce exactly to your specifications.' },
   { icon: Package, title: 'Packaging & Labeling', desc: 'Custom hang tags, woven labels, individual poly bags, and branded packaging.' },

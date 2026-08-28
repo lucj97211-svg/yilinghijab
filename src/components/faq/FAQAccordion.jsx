@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 const faqData = [
@@ -13,7 +13,7 @@ const faqData = [
   {
     category: 'Products',
     items: [
-      { q: 'What materials do you use for hijabs?', a: 'We work with chiffon, cotton, linen, jersey knit, crinkle chiffon, and custom blends. All fabrics are sourced from certified mills and tested for quality.' },
+      { q: 'What materials do you use for hijabs?', a: 'We work with custom printed modal, jersey modal, and Pantone-matched solid modal. All fabrics are sourced from certified mills and tested for quality.' },
       { q: 'Can you customize colors and prints?', a: 'Absolutely. We offer custom dyeing, digital printing, screen printing, and embroidery. Send us your Pantone codes or design files, and we will match them precisely.' },
       { q: 'Do you offer private labeling?', a: 'Yes, we provide private label and OEM services. Your brand logo can be added via woven labels, hang tags, or printed packaging.' },
     ],

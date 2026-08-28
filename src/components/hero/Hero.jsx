@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
@@ -45,8 +45,8 @@ export default function Hero() {
           <div className="relative order-1 md:order-2 flex justify-center md:justify-end">
             <div className="relative w-full max-w-sm md:max-w-none">
               <img
-                src="/assets/images/model-chiffon.webp"
-                alt="Model wearing premium chiffon hijab from Yiling wholesale collection"
+                src="/assets/images/product-model-01.png"
+                alt="Custom printed modal hijab manufacturer Yiling — factory direct Yiwu"
                 className="w-full object-cover"
                 style={{ maxHeight: '85vh', objectPosition: 'top' }}
               />

@@ -1,9 +1,9 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import Seo from '../components/seo/Seo';
 
 const timeline = [
-  { year: '2008', title: 'Yiling is founded', desc: 'Launched in Yiwu with a focused range of chiffon and jersey scarves — fabric and drape before anything else.' },
+  { year: '2008', title: 'Yiling is founded', desc: 'Launched in Yiwu with a focused range of printed modal and jersey scarves — fabric and drape before anything else.' },
   { year: '2012', title: 'First export orders', desc: 'First wholesale shipments reach buyers in Southeast Asia and the Middle East.' },
   { year: '2016', title: 'Global wholesale expansion', desc: 'Began shipping to the US, UK, and Australia as demand for premium hijabs surged worldwide.' },
   { year: '2019', title: 'OEM & Private Label', desc: 'Launched dedicated OEM production line — custom labels, prints, and packaging for brand partners.' },
@@ -83,7 +83,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-10">
             {[
               { n: '01', title: 'For every buyer', body: 'Yiling is for wholesale buyers, boutique owners, and brand builders of all scales — from 100-piece test orders to 100,000-piece seasonal runs. You set the brief; we make it real.' },
-              { n: '02', title: 'Considered materials', body: 'Modal, satin, chiffon, and our premium jersey — each weave chosen for how it drapes, breathes, and holds up through years of daily wear.' },
+              { n: '02', title: 'Considered materials', body: 'Custom printed modal, jersey modal, and Pantone-matched solid colours — each weave chosen for how it drapes, breathes, and holds up through years of daily wear.' },
               { n: '03', title: 'Built for reliability', body: 'We were built on repeat business. Our buyers come back because lead times are honest, defect rates are below 0.3%, and every shipment matches the sample.' },
               { n: '04', title: 'Modern, never rushed', body: 'High-volume production and individual attention to quality, held together. Quiet, intentional, consistent — craftsmanship as the means, not the shortcut.' },
             ].map((item, i) => (
@@ -150,10 +150,10 @@ export default function AboutPage() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { label: 'PREMIUM JERSEY', img: '/assets/images/material-jersey.webp' },
+              { label: 'CUSTOM PRINTED MODAL', img: '/assets/images/modal-printed-01.webp' },
               { label: 'MODAL', img: '/assets/images/material-modal.webp' },
-              { label: 'LUSTRE SATIN', img: '/assets/images/material-satin.webp' },
-              { label: 'CHIFFON', img: '/assets/images/material-chiffon.webp' },
+              { label: 'JERSEY MODAL', img: '/assets/images/jersey-modal-01.webp' },
+              { label: 'PANTONE MODAL', img: '/assets/images/pantone-modal-01.webp' },
             ].map((fab, i) => (
               <Link to="/products" key={i} className="group block" style={{ textDecoration: 'none' }}>
                 <div className="overflow-hidden mb-3" style={{ height: '200px', background: 'var(--cream)' }}>
@@ -179,7 +179,7 @@ export default function AboutPage() {
               <Link to="/contact" className="btn-espresso">Get in Touch</Link>
             </div>
             <div>
-              <img loading="lazy" decoding="async" src="/assets/images/factory-swatches.webp" alt="Premium hijab fabric swatches - jersey, chiffon, satin and modal" className="w-full object-cover" style={{ maxHeight: '400px' }} />
+              <img loading="lazy" decoding="async" src="/assets/images/factory-swatches.webp" alt="Custom printed modal hijab factory — Yiling Yiwu" className="w-full object-cover" style={{ maxHeight: '500px' }} />
             </div>
           </div>
         </div>

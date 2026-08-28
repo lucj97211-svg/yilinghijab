@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 
-const productOptions = ['Chiffon Hijab', 'Cotton Hijab', 'Linen Hijab', 'Printed Hijab', 'Crinkle Hijab', 'Jersey Hijab', 'Custom / OEM'];
+const productOptions = ['Custom Printed Modal', 'Jersey Modal', 'Custom Pantone Modal', 'Custom Hemming', 'Jersey Hijab', 'Custom / OEM'];
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
