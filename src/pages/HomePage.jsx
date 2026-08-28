@@ -108,8 +108,8 @@ export default function HomePage() {
               </div>
               <Link to="/contact" className="btn-espresso">Request Starter Bundle</Link>
             </div>
-            <div className="order-1 md:order-2">
-              <img loading="lazy" decoding="async" src="/assets/images/product-model-07.jpg" alt="Custom modal hijab sample pack — printed, Pantone, jersey modal" className="w-full block" />
+            <div className="order-1 md:order-2" style={{ overflow: 'hidden', maxHeight: '560px' }}>
+              <img loading="lazy" decoding="async" src="/assets/images/product-model-07.jpg" alt="Custom modal hijab sample pack — printed, Pantone, jersey modal" className="w-full object-cover object-top" style={{ maxHeight: '560px' }} />
             </div>
           </div>
         </div>
@@ -119,8 +119,8 @@ export default function HomePage() {
       <section style={{ background: 'var(--cream-2)' }}>
         <div className="container-site py-0">
           <div className="grid md:grid-cols-2 gap-0 items-center">
-            <div className="order-1 md:order-1">
-              <img loading="lazy" decoding="async" src="/assets/images/product-model-02.jpg" alt="OEM custom printed modal hijab manufacturing — private label from Yiwu" className="w-full block" />
+            <div className="order-1 md:order-1" style={{ overflow: 'hidden', maxHeight: '560px' }}>
+              <img loading="lazy" decoding="async" src="/assets/images/product-model-02.jpg" alt="OEM custom printed modal hijab manufacturing — private label from Yiwu" className="w-full object-cover object-top" style={{ maxHeight: '560px' }} />
             </div>
             <div className="py-14 md:py-20 md:pl-16 order-2 md:order-2">
               <p className="eyebrow mb-4" style={{ color: 'var(--gold)' }}>OEM PRODUCTION</p>
@@ -143,13 +143,13 @@ export default function HomePage() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { label: 'Custom Printed Modal', count: '3 styles', img: '/assets/images/modal-printed-01.webp' },
-              { label: 'Jersey Modal', count: '3 colourways', img: '/assets/images/jersey-modal-01.webp' },
-              { label: 'Custom Pantone Modal', count: '3 colourways', img: '/assets/images/pantone-modal-01.webp' },
-              { label: 'Custom Hemming', count: '3 styles', img: '/assets/images/hemming-custom-01.webp' },
+              { label: 'Custom Printed Modal', count: '3 styles', img: '/assets/images/product-model-09.jpg' },
+              { label: 'Jersey Modal', count: '3 colourways', img: '/assets/images/product-model-10.jpg' },
+              { label: 'Custom Pantone Modal', count: '3 colourways', img: '/assets/images/product-model-11.jpg' },
+              { label: 'Custom Hemming', count: '3 styles', img: '/assets/images/product-model-13.jpg' },
             ].map((mat, i) => (
               <Link to="/products" key={i} className="group block" style={{ textDecoration: 'none' }}>
-                <div className="overflow-hidden mb-3" style={{ height: '280px', background: 'var(--cream-2)' }}>
+                <div className="overflow-hidden mb-3" style={{ aspectRatio: '3/4', background: 'var(--cream-2)' }}>
                   <img loading="lazy" decoding="async" src={mat.img} alt={mat.label} className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <p className="serif text-lg" style={{ color: 'var(--espresso)' }}>{mat.label}</p>
