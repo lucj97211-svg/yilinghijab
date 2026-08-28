@@ -109,7 +109,7 @@ export default function HomePage() {
               <Link to="/contact" className="btn-espresso">Request Starter Bundle</Link>
             </div>
             <div className="order-1 md:order-2">
-              <img loading="lazy" decoding="async" src="/assets/images/product-hero-06.webp" alt="Custom modal hijab sample pack — printed, Pantone, jersey modal" className="w-full object-cover" style={{ maxHeight: '480px' }} />
+              <img loading="lazy" decoding="async" src="/assets/images/product-model-07.jpg" alt="Custom modal hijab sample pack — printed, Pantone, jersey modal" className="w-full block" />
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function HomePage() {
         <div className="container-site py-0">
           <div className="grid md:grid-cols-2 gap-0 items-center">
             <div className="order-1 md:order-1">
-              <img loading="lazy" decoding="async" src="/assets/images/product-hero-03.webp" alt="OEM custom printed modal hijab manufacturing — private label from Yiwu" className="w-full object-cover object-top" style={{ maxHeight: '520px' }} />
+              <img loading="lazy" decoding="async" src="/assets/images/product-model-02.jpg" alt="OEM custom printed modal hijab manufacturing — private label from Yiwu" className="w-full block" />
             </div>
             <div className="py-14 md:py-20 md:pl-16 order-2 md:order-2">
               <p className="eyebrow mb-4" style={{ color: 'var(--gold)' }}>OEM PRODUCTION</p>
@@ -179,7 +179,7 @@ export default function HomePage() {
               <Link to="/about" className="btn-espresso">Read Our Story</Link>
             </div>
             <div className="order-1 md:order-2">
-              <img loading="lazy" decoding="async" src="/assets/images/story-model.webp" alt="Yiwu Yiling Clothing hijab manufacturer since 2008" className="w-full object-cover object-top" style={{ maxHeight: '600px' }} />
+              <img loading="lazy" decoding="async" src="/assets/images/product-model-05.jpg" alt="Yiwu Yiling Clothing hijab manufacturer since 2008" className="w-full block" />
             </div>
           </div>
         </div>
