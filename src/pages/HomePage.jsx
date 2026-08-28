@@ -97,10 +97,10 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-0 items-center">
             <div className="py-14 md:py-20 md:pr-16 order-2 md:order-1">
               <p className="eyebrow mb-4" style={{ color: 'var(--muted)' }}>NEW TO WHOLESALE? START HERE</p>
-              <h2 className="serif mb-5" style={{ fontSize: 'clamp(1.8rem,4vw,3rem)' }}>The Yiling Starter Bundle</h2>
+               <h2 className="serif mb-5" style={{ fontSize: 'clamp(1.8rem,4vw,3rem)' }}>The Yiling Sample Pack</h2>
               <p style={{ fontSize: '15px', color: 'var(--espresso-light)', lineHeight: 1.8, marginBottom: '28px' }}>
-                Three core fabrics — jersey, chiffon, and satin — in a mixed sample pack. Assess quality before placing a bulk order. From 30 pcs per fabric.
-              </p>
+                 Three custom modal options — printed modal, Pantone solid, and jersey modal — in a sample pack to assess quality and colour accuracy before placing a bulk order. From 30 pcs per style.
+               </p>
               <div className="flex items-center gap-4 mb-8">
                 <span className="serif text-3xl" style={{ color: 'var(--espresso)' }}>From $89</span>
                 <span className="eyebrow" style={{ color: 'var(--muted)', textDecoration: 'line-through' }}>$120</span>
@@ -109,7 +109,7 @@ export default function HomePage() {
               <Link to="/contact" className="btn-espresso">Request Starter Bundle</Link>
             </div>
             <div className="order-1 md:order-2">
-              <img loading="lazy" decoding="async" src="/assets/images/starter-flatlay.webp" alt="Wholesale hijab starter sample pack for B2B buyers, MOQ 100 pcs" className="w-full object-cover" style={{ maxHeight: '480px' }} />
+              <img loading="lazy" decoding="async" src="/assets/images/product-hero-06.webp" alt="Custom modal hijab sample pack — printed, Pantone, jersey modal" className="w-full object-cover" style={{ maxHeight: '480px' }} />
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function HomePage() {
         <div className="container-site py-0">
           <div className="grid md:grid-cols-2 gap-0 items-center">
             <div className="order-1 md:order-1">
-              <img loading="lazy" decoding="async" src="/assets/images/banner-lastcall.webp" alt="OEM custom hijab manufacturing with private label fabric selection" className="w-full object-cover object-top" style={{ maxHeight: '520px' }} />
+              <img loading="lazy" decoding="async" src="/assets/images/product-hero-03.webp" alt="OEM custom printed modal hijab manufacturing — private label from Yiwu" className="w-full object-cover object-top" style={{ maxHeight: '520px' }} />
             </div>
             <div className="py-14 md:py-20 md:pl-16 order-2 md:order-2">
               <p className="eyebrow mb-4" style={{ color: 'var(--gold)' }}>OEM PRODUCTION</p>
@@ -137,16 +137,16 @@ export default function HomePage() {
       {/* ── SHOP BY MATERIAL ── */}
       <section className="section-padding" style={{ background: 'var(--cream)' }}>
         <div className="container-site">
-          <p className="eyebrow mb-3" style={{ color: 'var(--muted)' }}>BY THE HAND OF THE FABRIC</p>
+          <p className="eyebrow mb-3" style={{ color: 'var(--muted)' }}>OUR CUSTOM COLLECTIONS</p>
           <p style={{ fontSize: '15px', color: 'var(--espresso-light)', marginBottom: '40px', maxWidth: '500px' }}>
-            Each weave chosen for how it drapes, breathes, and sits with you all day.
+            Every collection made to your specification — your print, your colour, your edge finish.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { label: 'Premium Jersey', count: '2 styles', img: '/assets/images/material-jersey.webp' },
-              { label: 'Lustre Satin', count: '1 style', img: '/assets/images/material-satin.webp' },
-              { label: 'Modal', count: '1 style', img: '/assets/images/material-modal.webp' },
-              { label: 'Chiffon', count: '2 styles', img: '/assets/images/material-chiffon.webp' },
+              { label: 'Custom Printed Modal', count: '3 styles', img: '/assets/images/modal-printed-01.webp' },
+              { label: 'Jersey Modal', count: '3 colourways', img: '/assets/images/jersey-modal-01.webp' },
+              { label: 'Custom Pantone Modal', count: '3 colourways', img: '/assets/images/pantone-modal-01.webp' },
+              { label: 'Custom Hemming', count: '3 styles', img: '/assets/images/hemming-custom-01.webp' },
             ].map((mat, i) => (
               <Link to="/products" key={i} className="group block" style={{ textDecoration: 'none' }}>
                 <div className="overflow-hidden mb-3" style={{ height: '280px', background: 'var(--cream-2)' }}>
@@ -192,7 +192,7 @@ export default function HomePage() {
             {[
               { title: 'FREE SAMPLES', desc: 'Pre-production samples for every new style. Assess quality before bulk.' },
               { title: 'THE YILING GUARANTEE', desc: 'Defect rate below 0.3%. We replace or refund any quality issues.' },
-              { title: 'CONSIDERED MATERIALS', desc: 'Modal, satin, chiffon, jersey, and cotton — finished with care in Yiwu.' },
+              { title: 'CUSTOM MODAL SPECIALIST', desc: 'Custom printed modal, jersey modal, Pantone-matched solid colours, and bespoke hemming — all from one factory in Yiwu.' },
             ].map((item, i) => (
               <div key={i} className="px-4">
                 <p className="eyebrow mb-3" style={{ color: 'var(--espresso)' }}>{item.title}</p>
