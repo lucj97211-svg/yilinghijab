@@ -10,7 +10,7 @@ export default function HomePage() {
     <main style={{ background: 'var(--cream)' }}>
       <Seo
         title="Hijab Manufacturer & Wholesale Supplier | Yiling"
-        description="Factory-direct hijab wholesale from Yiwu, China. 18 styles in jersey, chiffon, satin, modal and cotton. MOQ 100 pcs, OEM and private label welcome."
+        description="Custom printed modal hijab manufacturer in Yiwu, China. OEM and private label for Instagram brands and boutiques. Custom Pantone, custom print, custom hemming. MOQ 100 pcs."
         path="/"
         jsonLd={orgSchema()}
       />
@@ -22,23 +22,23 @@ export default function HomePage() {
             {/* Text */}
             <div className="order-2 md:order-1 flex flex-col justify-center md:pr-12">
               <p className="eyebrow mb-5" style={{ color: 'var(--muted)' }}>THE EVERYDAY DRAPE</p>
-              <h1 style={{ fontSize: 'clamp(3rem,6.5vw,5.2rem)', fontFamily: "'Cormorant Garamond',serif", fontWeight: 400, lineHeight: 1.05, color: 'var(--espresso)', marginBottom: '28px' }}>
-                Softness<br /><em>that stays put.</em>
-              </h1>
-              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--espresso-light)', maxWidth: '420px', marginBottom: '36px' }}>
-                Our Premium Jersey — a fine cotton-rich knit with a gentle four-way stretch. It grips without pins, never slips, and stays fully opaque from morning to night.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link to="/products" className="btn-espresso">Shop Wholesale</Link>
-                <Link to="/custom-oem" className="btn-outline">Custom / OEM</Link>
-              </div>
-              <p className="eyebrow mt-6" style={{ fontSize: '11px', color: 'var(--muted)' }}>Premium Jersey · Light Yellow</p>
+               <h1 style={{ fontSize: 'clamp(3rem,6.5vw,5.2rem)', fontFamily: "'Cormorant Garamond',serif", fontWeight: 400, lineHeight: 1.05, color: 'var(--espresso)', marginBottom: '28px' }}>
+                Your print.<br /><em>Our modal.</em>
+               </h1>
+               <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--espresso-light)', maxWidth: '420px', marginBottom: '36px' }}>
+                 Custom printed modal hijabs, Pantone-matched solid colours, jersey modal basics, and bespoke hemming — all from one factory in Yiwu. MOQ from 100 pcs.
+               </p>
+               <div className="flex flex-wrap gap-4">
+                 <Link to="/products" className="btn-espresso">View Collections</Link>
+                 <Link to="/custom-oem" className="btn-outline">Custom / OEM</Link>
+               </div>
+               <p className="eyebrow mt-6" style={{ fontSize: '11px', color: 'var(--muted)' }}>Custom Printed Modal · Factory Direct</p>
             </div>
             {/* Image */}
             <div className="order-1 md:order-2 relative">
               <img loading="lazy" decoding="async"
-                src="/assets/images/hero-duo-models.webp"
-                alt="Models wearing premium wholesale hijabs in cream and mocha colourways"
+                src="/assets/images/product-hero-01.webp"
+                alt="Custom printed modal hijab manufacturer — factory direct from Yiwu China"
                 className="w-full object-cover object-top"
                 style={{ maxHeight: '90vh' }}
               />
@@ -70,12 +70,12 @@ export default function HomePage() {
           <h2 className="serif mb-10" style={{ fontSize: 'clamp(2rem,4vw,3rem)' }}>Shop by category</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'All Hijabs', count: '18 styles', img: '/assets/images/material-jersey.webp', link: '/products' },
-              { label: 'Custom / OEM', count: 'Any design', img: '/assets/images/factory-swatches.webp', link: '/custom-oem' },
-              { label: 'Chiffon', count: '3 colourways', img: '/assets/images/material-chiffon.webp', link: '/products' },
-              { label: 'Bamboo Modal', count: '3 colourways', img: '/assets/images/material-modal.webp', link: '/products' },
-              { label: 'Lustre Satin', count: '3 colourways', img: '/assets/images/material-satin.webp', link: '/products' },
-              { label: 'Combed Cotton', count: '3 colourways', img: '/assets/images/product-cotton-hijab.webp', link: '/products' },
+              { label: 'All Products', count: '12 styles', img: '/assets/images/product-hero-01.webp', link: '/products' },
+              { label: 'Custom / OEM', count: 'Any design', img: '/assets/images/product-hero-05.webp', link: '/custom-oem' },
+              { label: 'Custom Printed Modal', count: '3 styles', img: '/assets/images/modal-printed-01.webp', link: '/products' },
+              { label: 'Jersey Modal', count: '3 colourways', img: '/assets/images/jersey-modal-01.webp', link: '/products' },
+              { label: 'Custom Pantone Modal', count: '3 colourways', img: '/assets/images/pantone-modal-01.webp', link: '/products' },
+              { label: 'Custom Hemming', count: '3 styles', img: '/assets/images/hemming-custom-01.webp', link: '/products' },
             ].map((cat, i) => (
               <Link to={cat.link} key={i} className="group relative overflow-hidden block" style={{ textDecoration: 'none' }}>
                 <div style={{ height: '280px', overflow: 'hidden', background: 'var(--cream-2)' }}>

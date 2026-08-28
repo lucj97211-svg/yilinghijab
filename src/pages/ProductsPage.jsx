@@ -5,15 +5,13 @@ import FooterCTA from '../components/cta/FooterCTA';
 import products from '../data/products';
 import Seo from '../components/seo/Seo';
 
-const categories = ['all', 'jersey', 'satin', 'chiffon', 'modal', 'cotton', 'crinkle'];
+const categories = ['all', 'printed-modal', 'jersey-modal', 'pantone-modal', 'hemming'];
 const categoryLabels = {
   all: 'All Products',
-  jersey: 'Premium Jersey',
-  satin: 'Lustre Satin',
-  chiffon: 'Chiffon',
-  modal: 'Bamboo Modal',
-  cotton: 'Combed Cotton',
-  crinkle: 'Crinkle Georgette',
+  'printed-modal': 'Custom Printed Modal',
+  'jersey-modal': 'Jersey Modal',
+  'pantone-modal': 'Custom Pantone Modal',
+  hemming: 'Custom Hemming',
 };
 
 export default function ProductsPage() {
@@ -26,8 +24,8 @@ export default function ProductsPage() {
   return (
     <div data-component="products-page">
       <Seo
-        title="Wholesale Hijabs — 18 Styles, MOQ 100 pcs | Yiling Hijab"
-        description="Browse 18 wholesale hijab styles across six fabric families: premium jersey, lustre satin, chiffon, bamboo modal, combed cotton and crinkle georgette."
+        title="Custom Printed Modal Hijab Manufacturer — OEM & Private Label | Yiling Hijab"
+        description="Browse our custom hijab collections: Custom Printed Modal, Jersey Modal, Custom Pantone Modal, and Custom Hemming finishing. MOQ from 100 pcs. Factory-direct from Yiwu."
         path="/products"
       />
       <PageHeader title="Our Products" breadcrumbs={[{ label: 'Products' }]} />
@@ -35,7 +33,7 @@ export default function ProductsPage() {
       <section className="section-padding" style={{ background: 'var(--cream)' }}>
         <div className="container-site">
           <p style={{ fontSize: '15px', lineHeight: 1.8, color: 'var(--espresso-light)', maxWidth: '620px', marginBottom: '36px' }}>
-            Six fabric families, eighteen colourways, all produced in our own Yiwu facility.
+            Custom printed modal, jersey modal, Pantone-matched solid colours, and bespoke hemming — all produced in our own Yiwu facility.
             MOQ starts at 100 pieces per style. Free samples available on every line.
           </p>
 
