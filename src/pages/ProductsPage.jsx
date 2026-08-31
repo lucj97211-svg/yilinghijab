@@ -24,8 +24,8 @@ export default function ProductsPage() {
   return (
     <div data-component="products-page">
       <Seo
-        title="Custom Printed Modal Hijab Manufacturer — OEM & Private Label | Yiling Hijab"
-        description="Browse our custom hijab collections: Custom Printed Modal, Jersey Modal, Custom Pantone Modal, and Custom Hemming finishing. MOQ from 100 pcs. Factory-direct from Yiwu."
+        title="Custom Printed Modal Hijab — OEM & Private Label | Yiling"
+        description="Browse custom hijab collections: Printed Modal, Jersey Modal, Pantone Modal, Hemming finishing. MOQ from 100 pcs, factory-direct from Yiwu."
         path="/products"
       />
       <PageHeader title="Our Products" breadcrumbs={[{ label: 'Products' }]} />

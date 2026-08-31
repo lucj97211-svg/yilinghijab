@@ -10,7 +10,7 @@ export default function HomePage() {
     <main style={{ background: 'var(--cream)' }}>
       <Seo
         title="Hijab Manufacturer & Wholesale Supplier | Yiling"
-        description="Custom printed modal hijab manufacturer in Yiwu, China. OEM and private label for Instagram brands and boutiques. Custom Pantone, custom print, custom hemming. MOQ 100 pcs."
+        description="Custom printed modal hijab manufacturer in Yiwu, China. OEM and private label for Instagram brands and boutiques. Custom Pantone, print, hemming. MOQ 100 pcs."
         path="/"
         jsonLd={orgSchema()}
       />
