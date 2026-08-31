@@ -46,7 +46,7 @@ export default function AboutPage() {
               <p style={{ fontSize: '15px', color: 'var(--espresso-light)', lineHeight: 1.85, marginBottom: '20px' }}>
                 What began as a small workshop has grown into a 200-worker factory producing half a million hijabs every month — shipped to buyers across 50 countries.
               </p>
-              <p style={{ fontSize: '15px', fontStyle: 'italic', color: 'var(--espresso)', fontFamily: "'Cormorant Garamond', serif", fontSize: '20px' }}>
+              <p style={{ fontSize: '20px', fontStyle: 'italic', color: 'var(--espresso)', fontFamily: "'Cormorant Garamond', serif" }}>
                 Made for the trade, built on craft.
               </p>
             </div>
