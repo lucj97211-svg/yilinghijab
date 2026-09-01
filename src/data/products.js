@@ -882,6 +882,42 @@ const products = [
       { qty: '5,000+ pcs', price: '$3.72' },
     ],
   },
+  {
+    id: 27,
+    slug: 'jersey-modal-hijab-pull-on-jet-black',
+    name: 'Custom Jersey Modal Pull-On Hijab',
+    color: 'Jet Black',
+    material: 'Jersey Modal',
+    weight: '180 GSM',
+    size: 'One Size Fits All',
+    moq: '100 pcs',
+    price: '$4.80',
+    image: 'https://sc04.alicdn.com/kf/A801c08eb6a604dd98464c51ffdd9019fh.jpg',
+    gallery: [
+      'https://sc04.alicdn.com/kf/A801c08eb6a604dd98464c51ffdd9019fh.jpg',
+      'https://sc04.alicdn.com/kf/A614ece8b6b7249429c6e308ad4d51616r.jpg',
+      'https://sc04.alicdn.com/kf/A588c4cbca8ee4923a84c1f6232666a529.jpg',
+      'https://sc04.alicdn.com/kf/A57dfa5a11e9a461ab7d3b04aa53ec176d.jpg',
+      'https://sc04.alicdn.com/kf/Ad77f19e27f9147c18d5f8fbf54627dd9s.jpg',
+    ],
+    category: 'jersey-modal',
+    badge: 'NEW',
+    stars: 5,
+    reviews: 916,
+    description: 'Factory-direct custom Jersey Modal Pull-On Hijab in jet black — a top seller for Jersey Modal Hijab wholesale buyers and private-label brands building no-fuss, everyday modest fashion essentials. As a specialist custom Jersey Modal Hijab manufacturer since 2008, we produce this pull-on ninja-style cap on 180 GSM premium modal-jersey with a gathered crown, elasticated front opening, and full neck coverage — ready to wear in seconds with no pins required. OEM colour and woven label available. MOQ 100 pcs.',
+    features: [
+      'Jet black pull-on design — 180 GSM modal-jersey with gathered crown and elasticated front opening',
+      'Full neck and chin coverage in seconds — no pins, no underscarf required',
+      'OEM / private label: custom colour, woven label, and retail packaging available',
+      'Consistent stitch quality and Pantone-referenced colour across full run',
+    ],
+    tiers: [
+      { qty: '100 - 499 pcs', price: '$4.80' },
+      { qty: '500 - 1,999 pcs', price: '$4.40' },
+      { qty: '2,000 - 4,999 pcs', price: '$4.05' },
+      { qty: '5,000+ pcs', price: '$3.72' },
+    ],
+  },
 ];
 
 export default products;
