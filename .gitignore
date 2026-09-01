@@ -7,3 +7,5 @@ dist
 .DS_Store
 
 scripts/gsc-service-account.json
+
+scripts/_*.mjs
