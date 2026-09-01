@@ -617,6 +617,43 @@ const products = [
       { qty: '5,000+ pcs', price: '$4.50' },
     ],
   },
+  {
+    id: 20,
+    slug: 'custom-printed-modal-hijab-tie-dye-noir',
+    name: 'Custom Printed Modal Hijab',
+    color: 'Tie-Dye Noir',
+    material: 'Custom Printed Modal',
+    weight: '160 GSM',
+    size: '180 x 75 cm',
+    moq: '100 pcs',
+    price: '$5.80',
+    image: 'https://sc04.alicdn.com/kf/A8172f9d7f9194e6d9beb5320d587db5av.jpg',
+    gallery: [
+      'https://sc04.alicdn.com/kf/A8172f9d7f9194e6d9beb5320d587db5av.jpg',
+      'https://sc04.alicdn.com/kf/A739c5d3a95c54e099a18bc44ae7aa11aM.jpg',
+      'https://sc04.alicdn.com/kf/Aa5a5c542c3384f0ea2728bed6b60fe05C.jpg',
+      'https://sc04.alicdn.com/kf/A0f5c107c70f94a8d958815204781671e9.jpg',
+      'https://sc04.alicdn.com/kf/A149f870c305e4fdaaadc04419269c435j.jpg',
+      'https://sc04.alicdn.com/kf/Ab966d9d776054698adbf979781594dcdH.jpg',
+    ],
+    category: 'printed-modal',
+    badge: 'NEW',
+    stars: 5,
+    reviews: 692,
+    description: 'Factory-direct custom printed modal hijab in a striking tie-dye noir print — jet black base with organic silver-grey cloud bursts, produced for printed modal hijab wholesale buyers and private-label brands building editorial or streetwear-influenced modest fashion collections. As a specialist custom printed hijab manufacturer since 2008, we reproduce this ink-wash tie-dye effect on 160 GSM premium modal using reactive dye printing for deep, wash-fast colour with authentic texture variation. OEM artwork accepted. MOQ 100 pcs.',
+    features: [
+      'Tie-dye noir print — jet black with organic silver-grey cloud bursts on 160 GSM modal',
+      'Reactive dye printing for deep, wash-fast colour with authentic texture variation',
+      'OEM / private label: custom tie-dye artwork, woven label, and retail packaging available',
+      'Pantone-referenced colour calibration for repeat-order consistency',
+    ],
+    tiers: [
+      { qty: '100 - 499 pcs', price: '$5.80' },
+      { qty: '500 - 1,999 pcs', price: '$5.30' },
+      { qty: '2,000 - 4,999 pcs', price: '$4.90' },
+      { qty: '5,000+ pcs', price: '$4.50' },
+    ],
+  },
 ];
 
 export default products;
