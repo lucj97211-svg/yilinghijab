@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import FooterCTA from '../components/cta/FooterCTA';
 import Seo, { articleSchema, breadcrumbSchema, faqSchema } from '../components/seo/Seo';
 import posts from '../data/posts';
+import { productsForPost, categoryLinksForPost } from '../data/internal-links';
 
 function Block({ block }) {
   if (block.type === 'h2') {
@@ -27,6 +28,9 @@ export default function BlogPostPage() {
   const post = posts.find(p => p.slug === slug);
 
   if (!post) return <Navigate to="/blog" replace />;
+
+  const linkedProducts = productsForPost(post, 3);
+  const linkedCategories = categoryLinksForPost(post, 3);
 
   const related = posts.filter(p => p.slug !== slug).slice(0, 2);
 
@@ -153,6 +157,61 @@ export default function BlogPostPage() {
           <Link to="/contact" className="btn-espresso">Request a Quote</Link>
         </div>
       </article>
+
+      {/* Shop the styles covered in this guide */}
+      {linkedProducts.length > 0 && (
+        <section className="section-padding" style={{ background: 'var(--cream)' }}>
+          <div className="container-site" style={{ maxWidth: '900px' }}>
+            <p className="eyebrow mb-3" style={{ color: 'var(--muted)' }}>FROM OUR FACTORY</p>
+            <h2 className="serif mb-8" style={{ fontSize: 'clamp(1.5rem,3vw,2.2rem)' }}>
+              Styles covered in this guide
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {linkedProducts.map(p => (
+                <Link
+                  key={p.id}
+                  to={`/products/${p.slug}`}
+                  className="group block"
+                  style={{ textDecoration: 'none' }}
+                >
+                  <div className="overflow-hidden mb-4" style={{ background: 'var(--cream-2)' }}>
+                    <img loading="lazy" decoding="async"
+                      src={p.image}
+                      alt={`${p.name} ${p.color} — wholesale from Yiling`}
+                      className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      style={{ height: '220px' }}
+                    />
+                  </div>
+                  <h3 className="serif" style={{ fontSize: '1.1rem', color: 'var(--espresso)' }}>{p.name}</h3>
+                  <p style={{ fontSize: '13px', color: 'var(--muted)', marginTop: '2px' }}>
+                    {p.color} · {p.weight}
+                  </p>
+                  <p className="serif" style={{ fontSize: '1rem', marginTop: '6px' }}>
+                    from {p.price} · MOQ {p.moq}
+                  </p>
+                </Link>
+              ))}
+            </div>
+
+            {linkedCategories.length > 0 && (
+              <p className="mt-10" style={{ fontSize: '14px', color: 'var(--espresso-light)', lineHeight: 1.9 }}>
+                Browse the full range:{' '}
+                {linkedCategories.map((c, i) => (
+                  <React.Fragment key={c.category}>
+                    {i > 0 && ' · '}
+                    <Link
+                      to={c.path}
+                      style={{ color: 'var(--espresso)', textDecoration: 'underline', textUnderlineOffset: '3px' }}
+                    >
+                      {c.label} hijab wholesale ({c.count})
+                    </Link>
+                  </React.Fragment>
+                ))}
+              </p>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Related */}
       {related.length > 0 && (

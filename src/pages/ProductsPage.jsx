@@ -5,6 +5,7 @@ import ProductCard from '../components/products/ProductCard';
 import FooterCTA from '../components/cta/FooterCTA';
 import products from '../data/products';
 import Seo from '../components/seo/Seo';
+import MaterialComparison, { materialComparisonSchema } from '../components/products/MaterialComparison';
 
 const categories = ['all', 'printed-modal', 'jersey-modal', 'pantone-modal', 'hemming', 'jersey-cap'];
 const categoryLabels = {
@@ -49,6 +50,7 @@ export default function ProductsPage() {
         // Filtered views are a client-side lens on the same collection —
         // canonical always points at /products to avoid duplicate content.
         path="/products"
+        jsonLd={materialComparisonSchema()}
       />
       <PageHeader title="Our Products" breadcrumbs={[{ label: 'Products' }]} />
 
@@ -91,6 +93,8 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
+
+      <MaterialComparison />
 
       <FooterCTA />
     </div>

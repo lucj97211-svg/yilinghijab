@@ -4,6 +4,68 @@ import { Check, Star } from 'lucide-react';
 import FooterCTA from '../components/cta/FooterCTA';
 import Seo, { productSchema, breadcrumbSchema, productFaqSchema } from '../components/seo/Seo';
 import products from '../data/products';
+import { postsForProduct } from '../data/internal-links';
+
+// Buying guidance per product line. Deliberately states who should NOT
+// order it — honest scoping converts better and gives AI engines a clear
+// answer when buyers ask "which hijab line should I choose".
+const FIT_BY_CATEGORY = {
+  'printed-modal': {
+    bestFor: [
+      'Brands launching a signature print or seasonal capsule',
+      'Boutiques that need a visual hero product for campaigns',
+      'Private-label buyers supplying their own artwork files',
+    ],
+    notFor: [
+      'You only need plain solid colours — order Custom Pantone Modal instead',
+      'You need four-way stretch for everyday wear — see Jersey Modal',
+    ],
+  },
+  'jersey-modal': {
+    bestFor: [
+      'Everyday core stock and high-repeat basics programmes',
+      'Retailers whose customers want no-pin, no-underscarf wear',
+      'Buyers building a wide colourway range at a stable price',
+    ],
+    notFor: [
+      'You want printed patterns — see Custom Printed Modal',
+      'You need a lightweight formal drape — Pantone Modal is finer at 160 GSM',
+    ],
+  },
+  'pantone-modal': {
+    bestFor: [
+      'Brands matching an existing palette or corporate colour',
+      'Repeat orders where colour must stay identical batch to batch',
+      'Collections built around a tightly curated solid range',
+    ],
+    notFor: [
+      'You want prints or patterns — see Custom Printed Modal',
+      'You need stretch and opacity for active wear — see Jersey Modal',
+    ],
+  },
+  hemming: {
+    bestFor: [
+      'Premium positioning where edge finish is the selling point',
+      'Brands differentiating on craft detail rather than price',
+      'Buyers who need a specific hem spec across a whole range',
+    ],
+    notFor: [
+      'Entry-price programmes competing purely on cost',
+      'You have no hem preference — the standard finish is included on all lines',
+    ],
+  },
+  'jersey-cap': {
+    bestFor: [
+      'Add-on basket builders and undercap accessory lines',
+      'Retailers bundling caps with hijab sets to lift order value',
+      'Brands needing a low-price entry SKU under $3.50',
+    ],
+    notFor: [
+      'You need a full-size hijab — see Jersey Modal or Printed Modal',
+      'You want this as a standalone hero product carrying a collection',
+    ],
+  },
+};
 
 export default function ProductDetailPage() {
   const { slug } = useParams();
@@ -19,6 +81,9 @@ export default function ProductDetailPage() {
   const alsoLike = related.length < 3
     ? [...related, ...products.filter(p => p.category !== product.category).slice(0, 3 - related.length)]
     : related;
+
+  const relatedPosts = postsForProduct(product, 3);
+  const fit = FIT_BY_CATEGORY[product.category] || FIT_BY_CATEGORY['printed-modal'];
 
   return (
     <div data-component="product-detail-page">
@@ -191,6 +256,40 @@ export default function ProductDetailPage() {
         </div>
       </section>
 
+      {/* Who this style is for — plain-language buying guidance */}
+      <section className="section-padding" style={{ background: 'var(--cream)' }} data-component="best-for">
+        <div className="container-site">
+          <p className="eyebrow mb-3" style={{ color: 'var(--muted)' }}>IS THIS THE RIGHT STYLE?</p>
+          <h2 className="serif mb-8" style={{ fontSize: 'clamp(1.5rem,3vw,2.2rem)' }}>
+            Who orders this line
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div style={{ background: 'var(--cream-2)', padding: '26px', border: '1px solid var(--border)' }}>
+              <p className="eyebrow mb-4" style={{ color: 'var(--espresso)' }}>BEST FOR</p>
+              <ul style={{ fontSize: '15px', lineHeight: 2, color: 'var(--espresso-light)' }}>
+                {fit.bestFor.map((t, i) => <li key={i}>· {t}</li>)}
+              </ul>
+            </div>
+            <div style={{ background: 'var(--cream-2)', padding: '26px', border: '1px solid var(--border)' }}>
+              <p className="eyebrow mb-4" style={{ color: 'var(--muted)' }}>CONSIDER ANOTHER LINE IF</p>
+              <ul style={{ fontSize: '15px', lineHeight: 2, color: 'var(--espresso-light)' }}>
+                {fit.notFor.map((t, i) => <li key={i}>· {t}</li>)}
+              </ul>
+            </div>
+          </div>
+          <p className="mt-8" style={{ fontSize: '14px', color: 'var(--espresso-light)', lineHeight: 1.9 }}>
+            Not sure which fabric suits your programme?{' '}
+            <Link to="/products" style={{ color: 'var(--espresso)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+              Compare all five collections side by side
+            </Link>{' '}
+            or{' '}
+            <Link to="/contact" style={{ color: 'var(--espresso)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+              request a sample pack
+            </Link>.
+          </p>
+        </div>
+      </section>
+
       {/* Bulk packaging */}
       <section className="section-padding" style={{ background: 'var(--cream)' }}>
         <div className="container-site">
@@ -240,6 +339,43 @@ export default function ProductDetailPage() {
                   <h3 className="serif" style={{ fontSize: '1.15rem' }}>{p.name}</h3>
                   <p style={{ fontSize: '13px', color: 'var(--muted)', marginTop: '2px' }}>{p.color}</p>
                   <p className="serif" style={{ fontSize: '1rem', marginTop: '6px' }}>from {p.price}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Related reading — passes link equity between guides and products */}
+      {relatedPosts.length > 0 && (
+        <section className="section-padding" style={{ background: 'var(--cream)' }}>
+          <div className="container-site">
+            <p className="eyebrow mb-3" style={{ color: 'var(--muted)' }}>SOURCING GUIDES</p>
+            <h2 className="serif mb-8" style={{ fontSize: 'clamp(1.5rem,3vw,2.2rem)' }}>
+              Before you order {product.material.toLowerCase()}
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {relatedPosts.map(post => (
+                <Link
+                  key={post.slug}
+                  to={`/blog/${post.slug}`}
+                  className="group block"
+                  style={{ textDecoration: 'none' }}
+                >
+                  <div className="overflow-hidden mb-4" style={{ background: 'var(--cream-2)' }}>
+                    <img loading="lazy" decoding="async"
+                      src={post.cover}
+                      alt={post.title}
+                      className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      style={{ height: '200px' }}
+                    />
+                  </div>
+                  <p className="eyebrow" style={{ color: 'var(--muted)', fontSize: '10px' }}>
+                    {post.category} · {post.readTime}
+                  </p>
+                  <h3 className="serif mt-2" style={{ fontSize: '1.1rem', lineHeight: 1.4, color: 'var(--espresso)' }}>
+                    {post.title}
+                  </h3>
                 </Link>
               ))}
             </div>
