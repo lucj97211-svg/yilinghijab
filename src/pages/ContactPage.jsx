@@ -106,6 +106,61 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* WHAT HAPPENS AFTER YOU ENQUIRE */}
+      <section style={{ borderTop: '1px solid var(--border)' }}>
+        <div className="container-site py-16">
+          <p className="eyebrow mb-3" style={{ color: 'var(--muted)' }}>WHAT HAPPENS NEXT</p>
+          <h2 className="serif mb-2" style={{ fontSize: 'clamp(1.5rem,3vw,2rem)' }}>From enquiry to delivered stock</h2>
+          <p style={{ fontSize: '14px', color: 'var(--muted)', marginBottom: '40px', maxWidth: '620px' }}>
+            No guesswork about timelines. This is the sequence every wholesale and private-label order follows.
+          </p>
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { step: '01', t: 'Quote within 24 hours', d: 'Send your styles, colourways, and quantities. We reply with tier pricing, fabric options, and a realistic production window — usually the same working day.' },
+              { step: '02', t: 'Sample in ~7 days', d: 'We produce a pre-production sample so you can check hand feel, colour accuracy, and stitch quality. Sample fees are credited against your first bulk order.' },
+              { step: '03', t: 'Bulk in 25–35 days', d: 'After you approve the sample, bulk production runs 25 to 35 days depending on volume and finishing. First-piece approval can be filmed for remote buyers.' },
+              { step: '04', t: 'Ship worldwide', d: 'DHL, FedEx, or sea freight from Yiwu, quoted door-to-door or FOB. Full export documentation, carton labelling, and packing lists included.' },
+            ].map((s, i) => (
+              <div key={i}>
+                <p className="serif" style={{ fontSize: '2rem', color: 'var(--border)', lineHeight: 1, marginBottom: '12px' }}>{s.step}</p>
+                <h3 className="serif" style={{ fontSize: '1.05rem', color: 'var(--espresso)', marginBottom: '8px' }}>{s.t}</h3>
+                <p style={{ fontSize: '13px', color: 'var(--espresso-light)', lineHeight: 1.8 }}>{s.d}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mt-16 pt-12" style={{ borderTop: '1px solid var(--border)' }}>
+            <div>
+              <p className="eyebrow mb-3" style={{ color: 'var(--espresso)' }}>THE COMPANY</p>
+              <p style={{ fontSize: '14px', color: 'var(--espresso-light)', lineHeight: 1.9 }}>
+                Yiwu Yiling Clothing Co., Ltd.<br />
+                Manufacturing since 2008<br />
+                Yiwu, Zhejiang Province, China<br />
+                Own facility — not a trading agent
+              </p>
+            </div>
+            <div>
+              <p className="eyebrow mb-3" style={{ color: 'var(--espresso)' }}>ORDER TERMS</p>
+              <p style={{ fontSize: '14px', color: 'var(--espresso-light)', lineHeight: 1.9 }}>
+                MOQ 100 pcs per colourway<br />
+                Pricing from $3.20 per piece<br />
+                30% deposit, 70% before shipment<br />
+                No setup or tooling fees
+              </p>
+            </div>
+            <div>
+              <p className="eyebrow mb-3" style={{ color: 'var(--espresso)' }}>WORKING HOURS</p>
+              <p style={{ fontSize: '14px', color: 'var(--espresso-light)', lineHeight: 1.9 }}>
+                Mon–Sat, 09:00–18:00 (GMT+8)<br />
+                Enquiries answered within 24 hours<br />
+                English and Chinese supported<br />
+                Factory visits by appointment
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* YOU MIGHT FIND IT FASTER */}
       <section style={{ background: 'var(--cream-2)', borderTop: '1px solid var(--border)' }}>
         <div className="container-site py-16">

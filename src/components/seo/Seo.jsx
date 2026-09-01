@@ -9,6 +9,39 @@ const DEFAULT_OG = `${ORIGIN}/assets/images/hero-duo-models.webp`;
 // ("https://sc04.alicdn.com/..."). Never double-prefix an absolute URL.
 export const absUrl = u => (/^https?:\/\//i.test(u) ? u : `${ORIGIN}${u}`);
 
+const TITLE_MAX = 60;
+const DESC_MAX = 158;
+
+/**
+ * Google truncates around 60 chars. Strip the " | Brand" suffix first, then
+ * trim on a word boundary — never cut a keyword mid-word.
+ */
+export function clampTitle(raw, max = TITLE_MAX) {
+  const t = String(raw || '').trim();
+  if (t.length <= max) return t;
+
+  const [head] = t.split(/\s+[|—–-]\s+Yiling(?:\s+Hijab)?$/);
+  if (head && head.length <= max) return head;
+
+  const body = head || t;
+  const cut = body.slice(0, max);
+  const stop = cut.lastIndexOf(' ');
+  return (stop > max * 0.6 ? cut.slice(0, stop) : cut).replace(/[\s,:;—–-]+$/, '');
+}
+
+/** Same idea for descriptions: trim on a sentence or word boundary. */
+export function clampDescription(raw, max = DESC_MAX) {
+  const d = String(raw || '').replace(/\s+/g, ' ').trim();
+  if (d.length <= max) return d;
+
+  const cut = d.slice(0, max);
+  const sentence = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('! '), cut.lastIndexOf('? '));
+  if (sentence > max * 0.55) return cut.slice(0, sentence + 1);
+
+  const word = cut.lastIndexOf(' ');
+  return (word > max * 0.6 ? cut.slice(0, word) : cut).replace(/[\s,:;—–-]+$/, '') + '…';
+}
+
 export default function Seo({
   title,
   description,
@@ -22,10 +55,14 @@ export default function Seo({
   const ogImage = absUrl(image);
   const blocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
+  // Search-result copy is length-capped; social cards keep the full text.
+  const metaTitle = clampTitle(title);
+  const metaDesc = clampDescription(description);
+
   return (
     <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
+      <title>{metaTitle}</title>
+      <meta name="description" content={metaDesc} />
       <link rel="canonical" href={url} />
       {noindex && <meta name="robots" content="noindex,follow" />}
 
@@ -190,7 +227,10 @@ export function productFaqSchema(p) {
     },
     {
       q: `What fabric and weight is the ${p.name}?`,
-      a: `This style is produced in ${p.material} at ${p.weight}, finished at ${p.size}. Custom fabric weight and cut size are available on request for bulk orders.`,
+      a:
+        p.category === 'hemming'
+          ? `This is a finishing option applied to ${p.weight} modal hijabs, cut at ${p.size}. The ${p.color.toLowerCase()} finish can be applied across any fabric in our range, and custom weight or cut size is available on bulk orders.`
+          : `This style is produced in ${p.material} at ${p.weight}, finished at ${p.size}. Custom fabric weight and cut size are available on request for bulk orders.`,
     },
   ]);
 }

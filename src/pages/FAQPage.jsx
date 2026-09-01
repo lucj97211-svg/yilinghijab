@@ -23,7 +23,7 @@ const topics = [
     items: [
       { q: 'What is your quality guarantee?', a: 'We maintain a defect rate below 0.3%. Every order goes through three-stage quality control: incoming fabric inspection, in-line production checks, and final pre-shipment audit.' },
       { q: 'What if I receive defective items?', a: 'Contact us within 7 days of receiving your shipment with photos of the defects. We will replace defective items or issue a credit note — at no additional shipping cost to you.' },
-      { q: 'Can I request a pre-production sample?', a: 'Yes. We strongly recommend samples before bulk orders. Sample lead time is 5–7 business days. Sample fees are credited back against your first bulk order.' },
+      { q: 'Can I request a pre-production sample?', a: 'Yes. We strongly recommend approving a sample before bulk production. Sample lead time is about 7 days. Sample fees are credited back against your first bulk order.' },
       { q: 'What condition should returns be in?', a: 'Returns are accepted for manufacturing defects only. Items must be unworn, unwashed, and in original packaging. Please do not return items that have been used or altered.' },
     ],
   },
@@ -44,9 +44,33 @@ const topics = [
     intro: 'Custom production, branding, and private label services.',
     items: [
       { q: 'Do you offer private label / OEM services?', a: 'Yes. We handle everything from fabric selection and pattern development to woven labels, hang tags, polybag packaging, and carton labelling. Your brand, our factory.' },
-      { q: 'What is the MOQ for OEM orders?', a: 'The standard OEM MOQ is 300 pieces per design. For woven label production alone, minimum is 500 pieces. We can discuss lower MOQs for established partners.' },
+      { q: 'What is the MOQ for OEM orders?', a: 'The MOQ for OEM and private label production is 100 pieces per colourway — the same as our standard catalogue. Woven label production alone has a 500-piece minimum, so most brands order labels once and draw them down across several production runs.' },
       { q: 'Can I use my own fabric?', a: 'We prefer to source fabric ourselves to ensure quality control, but we can work with buyer-supplied fabric for orders over 1,000 pieces. Additional inspection fees may apply.' },
       { q: 'Do you sign NDAs or exclusivity agreements?', a: 'Yes. We regularly sign NDAs for design protection and can offer regional or market exclusivity for large-volume OEM partners. Contact us to discuss terms.' },
+      { q: 'What artwork file formats do you accept for custom prints?', a: 'We accept AI, EPS, PDF, PSD, and TIFF files. For print reproduction we need at least 300 DPI at final print size, with Pantone references for any brand-critical colours. If you only have a low-resolution reference, our design team can redraw the artwork to production standard.' },
+      { q: 'Do you charge a setup or tooling fee for custom prints?', a: 'No setup or tooling fee. Custom artwork printing, woven labels, hang tags, and retail packaging are quoted into the unit price rather than charged as a separate mould or plate fee.' },
+    ],
+  },
+  {
+    id: 'pricing',
+    label: 'Pricing & Payment',
+    intro: 'What things cost, how tiers work, and how payment is handled.',
+    items: [
+      { q: 'How much does a custom hijab cost per piece?', a: 'Factory-direct pricing starts at $3.20 per piece for jersey undercaps, $4.80 for jersey modal hijabs, and $5.80 for custom printed modal hijabs, all at the 100-piece MOQ. Unit price drops at each volume tier, down to $2.40, $3.72, and $4.50 respectively at 5,000+ pieces.' },
+      { q: 'How do the volume price tiers work?', a: 'Every style has four tiers: 100–499 pieces, 500–1,999, 2,000–4,999, and 5,000+. The tier is calculated per colourway, not per total order, so ordering 500 pieces of one colour reaches a better price than 100 pieces across five colours.' },
+      { q: 'What payment terms do you offer?', a: 'Standard terms are 30% deposit to start production and 70% balance before shipment. We accept bank transfer (T/T), and established partners can discuss L/C terms for large orders. Sample fees are payable upfront and credited against your first bulk order.' },
+      { q: 'Are there hidden costs beyond the unit price?', a: 'The quoted unit price covers fabric, production, standard finishing, and polybag packing. Shipping, import duties, and any specialty packaging are quoted separately so you can see exactly what you are paying for.' },
+    ],
+  },
+  {
+    id: 'factory',
+    label: 'About the Factory',
+    intro: 'Who we are, where we produce, and how to verify us.',
+    items: [
+      { q: 'Are you a factory or a trading company?', a: 'We are a manufacturer. Yiwu Yiling Clothing Co., Ltd. has operated its own production facility in Yiwu, Zhejiang Province since 2008. Cutting, sewing, printing coordination, and QC all happen under our own management rather than being brokered out.' },
+      { q: 'Can I visit the factory or arrange a video inspection?', a: 'Yes. Buyers are welcome to visit our Yiwu facility by appointment. If travel is not practical, we run live video walkthroughs of the production line and can film first-piece approval before bulk runs.' },
+      { q: 'How long have you been manufacturing hijabs?', a: 'Since 2008. We hold a 4.9 out of 5 rating across 283 verified buyer reviews, largely from repeat wholesale and private-label customers.' },
+      { q: 'Which markets do you already ship to?', a: 'We regularly ship to the USA, UK, Canada, Australia, Indonesia, Malaysia, the UAE, Saudi Arabia, Germany, France, and the Netherlands, so we are familiar with the documentation and labelling expectations in those markets.' },
     ],
   },
 ];
@@ -63,24 +87,26 @@ function AccordionItem({ q, a }) {
         <span style={{ fontSize: '15px', fontWeight: 500, color: 'var(--espresso)', fontFamily: "'Jost', sans-serif", paddingRight: '24px' }}>{q}</span>
         <ChevronDown size={18} color="var(--muted)" style={{ flexShrink: 0, transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
       </button>
-      {open && (
-        <div style={{ fontSize: '14px', color: 'var(--espresso-light)', lineHeight: 1.8, paddingBottom: '20px', maxWidth: '640px' }}>
-          {a}
-        </div>
-      )}
+      {/* Rendered even when collapsed so crawlers and AI engines can read
+          the answer text — visibility is handled with CSS, not unmounting. */}
+      <div
+        hidden={!open}
+        style={{ fontSize: '14px', color: 'var(--espresso-light)', lineHeight: 1.8, paddingBottom: '20px', maxWidth: '640px' }}
+      >
+        {a}
+      </div>
     </div>
   );
 }
 
 export default function FAQPage() {
   const [activeTopic, setActiveTopic] = useState('ordering');
-  const current = topics.find(t => t.id === activeTopic);
 
   return (
     <div style={{ background: 'var(--cream)' }}>
       <Seo
-        title="Wholesale Hijab FAQ — MOQ, Shipping, Samples | Yiling Hijab"
-        description="Answers on hijab wholesale MOQ, pricing tiers, sample policy, lead times, shipping options, certifications and OEM requirements for B2B buyers."
+        title="Wholesale Hijab FAQ — MOQ, Pricing, Lead Times"
+        description="25 answers for hijab wholesale buyers: 100 pc MOQ, volume pricing from $3.20, 7-day samples, 25-35 day bulk lead time, OEM and private label terms."
         path="/faq"
         jsonLd={faqSchema(topics.flatMap(t => t.items))}
       />
@@ -135,15 +161,20 @@ export default function FAQPage() {
               </nav>
             </div>
 
-            {/* Content */}
+            {/* Content — every topic is rendered so the full Q&A set is in
+                the HTML; inactive topics are hidden rather than unmounted. */}
             <div className="md:col-span-3">
-              <h2 className="serif mb-2" style={{ fontSize: 'clamp(1.5rem,3vw,2.2rem)' }}>{current.label}</h2>
-              <p style={{ fontSize: '14px', color: 'var(--muted)', marginBottom: '32px' }}>{current.intro}</p>
-              <div>
-                {current.items.map((item, i) => (
-                  <AccordionItem key={i} q={item.q} a={item.a} />
-                ))}
-              </div>
+              {topics.map(t => (
+                <div key={t.id} hidden={t.id !== activeTopic}>
+                  <h2 className="serif mb-2" style={{ fontSize: 'clamp(1.5rem,3vw,2.2rem)' }}>{t.label}</h2>
+                  <p style={{ fontSize: '14px', color: 'var(--muted)', marginBottom: '32px' }}>{t.intro}</p>
+                  <div>
+                    {t.items.map((item, i) => (
+                      <AccordionItem key={i} q={item.q} a={item.a} />
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <main style={{ background: 'var(--cream)' }}>
       <Seo
-        title="Custom Printed Modal Hijab Manufacturer & Wholesale Supplier | Yiling"
+        title="Custom Hijab Manufacturer & Wholesale Supplier | Yiling"
         description="Custom printed modal hijab manufacturer in Yiwu, China since 2008. OEM and private label for boutiques and wholesale buyers. Custom print, Pantone matching, jersey modal, hemming. MOQ 100 pcs, samples in 7 days. 4.9/5 from 283 reviews."
         path="/"
         jsonLd={[orgSchema(), siteSchema()]}

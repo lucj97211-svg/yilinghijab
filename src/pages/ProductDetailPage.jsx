@@ -85,11 +85,29 @@ export default function ProductDetailPage() {
   const relatedPosts = postsForProduct(product, 3);
   const fit = FIT_BY_CATEGORY[product.category] || FIT_BY_CATEGORY['printed-modal'];
 
+  // Keep the SERP title under 60 chars: drop the qualifier, then the brand,
+  // rather than letting Google truncate the product name itself.
+  const metaTitle = (() => {
+    const base = `${product.name} ${product.color}`;
+    const full = `${base} — Wholesale & OEM | Yiling`;
+    if (full.length <= 60) return full;
+    const short = `${base} — Wholesale | Yiling`;
+    if (short.length <= 60) return short;
+    return `${base} | Yiling`.slice(0, 60);
+  })();
+
+  // Hemming is a finishing service, not a fabric — leading with the material
+  // field there reads as if the product were a printed modal scarf.
+  const metaDescription =
+    product.category === 'hemming'
+      ? `${product.color} hem finishing on ${product.weight} modal hijabs. Factory-direct from ${product.price}/pc, MOQ ${product.moq}. OEM and private label, samples in 7 days.`
+      : `${product.color} ${product.material.toLowerCase()} hijab, ${product.weight}. Factory-direct from ${product.price}/pc, MOQ ${product.moq}. OEM and private label, samples in 7 days.`;
+
   return (
     <div data-component="product-detail-page">
       <Seo
-        title={`${product.name} ${product.color} — Wholesale & OEM Manufacturer | Yiling`}
-        description={`${product.material} hijab in ${product.color}, ${product.weight}, ${product.size}. Factory-direct from ${product.price}/pc, MOQ ${product.moq}. OEM and private label welcome — samples in 7 days, bulk in 25–35 days from Yiwu, China.`}
+        title={metaTitle}
+        description={metaDescription}
         path={`/products/${product.slug}`}
         image={product.image}
         type="product"

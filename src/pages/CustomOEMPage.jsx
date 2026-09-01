@@ -19,8 +19,8 @@ export default function CustomOEMPage() {
   return (
     <div data-component="custom-oem-page">
       <Seo
-        title="OEM & Private Label Hijab Manufacturer | Custom Production"
-        description="Custom hijab manufacturing from a Yiwu factory. Your fabric, colour, size, labels and packaging. Samples in 7 days, bulk in 15-25 days. Full OEM and ODM service."
+        title="OEM & Private Label Hijab Manufacturer | Yiling"
+        description="Custom hijab manufacturing from a Yiwu factory since 2008. Your fabric, colour, size, labels and packaging. Samples in 7 days, bulk in 25-35 days. MOQ 100 pcs."
         path="/custom-oem"
       />
       <PageHeader title="Custom / OEM Manufacturing" breadcrumbs={[{ label: 'Custom / OEM' }]} />
