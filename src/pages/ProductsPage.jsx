@@ -5,13 +5,14 @@ import FooterCTA from '../components/cta/FooterCTA';
 import products from '../data/products';
 import Seo from '../components/seo/Seo';
 
-const categories = ['all', 'printed-modal', 'jersey-modal', 'pantone-modal', 'hemming'];
+const categories = ['all', 'printed-modal', 'jersey-modal', 'pantone-modal', 'hemming', 'jersey-cap'];
 const categoryLabels = {
   all: 'All Products',
   'printed-modal': 'Custom Printed Modal',
   'jersey-modal': 'Jersey Modal',
   'pantone-modal': 'Custom Pantone Modal',
   hemming: 'Custom Hemming',
+  'jersey-cap': 'Custom Jersey Cap',
 };
 
 export default function ProductsPage() {
