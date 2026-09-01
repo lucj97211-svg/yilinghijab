@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom';
 import FooterCTA from '../components/cta/FooterCTA';
 import TestimonialCard from '../components/testimonials/TestimonialCard';
 import Seo, { orgSchema, siteSchema } from '../components/seo/Seo';
+import products from '../data/products';
+
+// The homepage surfaces a fixed set of hero categories — new products roll
+// into these counts automatically instead of adding another tile, so the
+// grid stays balanced no matter how many styles are listed.
+const totalStyles = products.length;
+const countLabel = (category, noun) =>
+  `${products.filter(p => p.category === category).length} ${noun}`;
 
 export default function HomePage() {
 
@@ -70,13 +78,12 @@ export default function HomePage() {
           <h2 className="serif mb-10" style={{ fontSize: 'clamp(2rem,4vw,3rem)' }}>Shop by category</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'All Products', count: '25 styles', img: '/assets/images/product-hero-01.webp', link: '/products' },
+              { label: 'All Products', count: `${totalStyles} styles`, img: '/assets/images/product-hero-01.webp', link: '/products' },
               { label: 'Custom / OEM', count: 'Any design', img: '/assets/images/product-hero-05.webp', link: '/custom-oem' },
-              { label: 'Custom Printed Modal', count: '9 styles', img: '/assets/images/modal-printed-01.webp', link: '/products?category=printed-modal' },
-              { label: 'Jersey Modal', count: '8 colourways', img: '/assets/images/jersey-modal-01.webp', link: '/products?category=jersey-modal' },
-              { label: 'Custom Pantone Modal', count: '3 colourways', img: '/assets/images/pantone-modal-01.webp', link: '/products?category=pantone-modal' },
-              { label: 'Custom Hemming', count: '3 finishes', img: '/assets/images/hemming-custom-01.webp', link: '/products?category=hemming' },
-              { label: 'Custom Jersey Cap', count: '2 styles', img: 'https://sc04.alicdn.com/kf/A3f5c09495c9b457c9c2deecbbd9a677aC.jpg', link: '/products?category=jersey-cap' },
+              { label: 'Custom Printed Modal', count: countLabel('printed-modal', 'styles'), img: '/assets/images/modal-printed-01.webp', link: '/products?category=printed-modal' },
+              { label: 'Jersey Modal', count: countLabel('jersey-modal', 'colourways'), img: '/assets/images/jersey-modal-01.webp', link: '/products?category=jersey-modal' },
+              { label: 'Custom Pantone Modal', count: countLabel('pantone-modal', 'colourways'), img: '/assets/images/pantone-modal-01.webp', link: '/products?category=pantone-modal' },
+              { label: 'Custom Hemming', count: countLabel('hemming', 'finishes'), img: '/assets/images/hemming-custom-01.webp', link: '/products?category=hemming' },
             ].map((cat, i) => (
               <Link to={cat.link} key={i} className="group relative overflow-hidden block" style={{ textDecoration: 'none' }}>
                 <div style={{ aspectRatio: '3/4', overflow: 'hidden', background: 'var(--cream-2)' }}>
@@ -144,10 +151,10 @@ export default function HomePage() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { label: 'Custom Printed Modal', count: '9 styles', img: '/assets/images/product-model-09.jpg', link: '/products?category=printed-modal' },
-              { label: 'Jersey Modal', count: '8 colourways', img: '/assets/images/product-model-10.jpg', link: '/products?category=jersey-modal' },
-              { label: 'Custom Pantone Modal', count: '3 colourways', img: '/assets/images/product-model-11.jpg', link: '/products?category=pantone-modal' },
-              { label: 'Custom Hemming', count: '3 finishes', img: '/assets/images/product-model-13.jpg', link: '/products?category=hemming' },
+              { label: 'Custom Printed Modal', count: countLabel('printed-modal', 'styles'), img: '/assets/images/product-model-09.jpg', link: '/products?category=printed-modal' },
+              { label: 'Jersey Modal', count: countLabel('jersey-modal', 'colourways'), img: '/assets/images/product-model-10.jpg', link: '/products?category=jersey-modal' },
+              { label: 'Custom Pantone Modal', count: countLabel('pantone-modal', 'colourways'), img: '/assets/images/product-model-11.jpg', link: '/products?category=pantone-modal' },
+              { label: 'Custom Hemming', count: countLabel('hemming', 'finishes'), img: '/assets/images/product-model-13.jpg', link: '/products?category=hemming' },
             ].map((mat, i) => (
               <Link to={mat.link} key={i} className="group block" style={{ textDecoration: 'none' }}>
                 <div className="overflow-hidden mb-3" style={{ aspectRatio: '3/4', background: 'var(--cream-2)' }}>
