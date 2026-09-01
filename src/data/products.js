@@ -731,6 +731,42 @@ const products = [
       { qty: '5,000+ pcs', price: '$3.72' },
     ],
   },
+  {
+    id: 23,
+    slug: 'jersey-hijab-undercap-warm-sand',
+    name: 'Jersey Hijab Undercap with Tie Back',
+    color: 'Warm Sand',
+    material: 'Jersey Modal',
+    weight: '180 GSM',
+    size: 'One Size Fits All',
+    moq: '100 pcs',
+    price: '$3.20',
+    image: 'https://sc04.alicdn.com/kf/A3f5c09495c9b457c9c2deecbbd9a677aC.jpg',
+    gallery: [
+      'https://sc04.alicdn.com/kf/A3f5c09495c9b457c9c2deecbbd9a677aC.jpg',
+      'https://sc04.alicdn.com/kf/A335f0206d0c54d9688812344f6cec2cfn.jpg',
+      'https://sc04.alicdn.com/kf/Aafe056c106f24df5a0d0a1f19753d441M.jpg',
+      'https://sc04.alicdn.com/kf/Ab2243d622ba9459c816390aa7793c243P.jpg',
+      'https://sc04.alicdn.com/kf/A73351bf2cd7941b7aebb6b368ece60dd8.jpg',
+    ],
+    category: 'jersey-cap',
+    badge: 'NEW',
+    stars: 5,
+    reviews: 527,
+    description: 'Factory-direct Jersey Hijab Undercap in warm sand — a top seller for jersey hijab undercap wholesale buyers and private-label brands building everyday modest fashion basics. As a specialist jersey hijab undercap manufacturer since 2008, we produce this tie-back cap on 180 GSM premium modal-jersey with a structured dome and adjustable bow tie at the nape for a secure, all-day fit. OEM colour, woven label, and retail packaging available. MOQ 100 pcs.',
+    features: [
+      'Warm sand Jersey Modal undercap — 180 GSM modal-jersey for softness and stretch',
+      'Structured dome with adjustable tie-back bow for secure all-day fit',
+      'OEM / private label: custom colour, woven label, and retail packaging available',
+      'Consistent stitch quality and Pantone-referenced colour across full run',
+    ],
+    tiers: [
+      { qty: '100 - 499 pcs', price: '$3.20' },
+      { qty: '500 - 1,999 pcs', price: '$2.90' },
+      { qty: '2,000 - 4,999 pcs', price: '$2.65' },
+      { qty: '5,000+ pcs', price: '$2.40' },
+    ],
+  },
 ];
 
 export default products;
