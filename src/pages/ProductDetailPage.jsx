@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Check, Star } from 'lucide-react';
 import FooterCTA from '../components/cta/FooterCTA';
-import Seo, { productSchema, breadcrumbSchema } from '../components/seo/Seo';
+import Seo, { productSchema, breadcrumbSchema, productFaqSchema } from '../components/seo/Seo';
 import products from '../data/products';
 
 export default function ProductDetailPage() {
@@ -23,8 +23,8 @@ export default function ProductDetailPage() {
   return (
     <div data-component="product-detail-page">
       <Seo
-        title={`${product.name} ${product.color} — Wholesale | Yiling`}
-        description={`${product.material} hijab in ${product.color}, ${product.weight}. Factory-direct from ${product.price}/pc, MOQ 100 pcs. OEM and private label welcome.`}
+        title={`${product.name} ${product.color} — Wholesale & OEM Manufacturer | Yiling`}
+        description={`${product.material} hijab in ${product.color}, ${product.weight}, ${product.size}. Factory-direct from ${product.price}/pc, MOQ ${product.moq}. OEM and private label welcome — samples in 7 days, bulk in 25–35 days from Yiwu, China.`}
         path={`/products/${product.slug}`}
         image={product.image}
         type="product"
@@ -35,6 +35,7 @@ export default function ProductDetailPage() {
             { name: 'Products', path: '/products' },
             { name: `${product.name} ${product.color}`, path: `/products/${product.slug}` },
           ]),
+          productFaqSchema(product),
         ]}
       />
 

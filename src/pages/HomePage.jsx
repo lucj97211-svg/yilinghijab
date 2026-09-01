@@ -2,17 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FooterCTA from '../components/cta/FooterCTA';
 import TestimonialCard from '../components/testimonials/TestimonialCard';
-import Seo, { orgSchema } from '../components/seo/Seo';
+import Seo, { orgSchema, siteSchema } from '../components/seo/Seo';
 
 export default function HomePage() {
 
   return (
     <main style={{ background: 'var(--cream)' }}>
       <Seo
-        title="Hijab Manufacturer & Wholesale Supplier | Yiling"
-        description="Custom printed modal hijab manufacturer in Yiwu, China. OEM and private label for Instagram brands and boutiques. Custom Pantone, print, hemming. MOQ 100 pcs."
+        title="Custom Printed Modal Hijab Manufacturer & Wholesale Supplier | Yiling"
+        description="Custom printed modal hijab manufacturer in Yiwu, China since 2008. OEM and private label for boutiques and wholesale buyers. Custom print, Pantone matching, jersey modal, hemming. MOQ 100 pcs, samples in 7 days. 4.9/5 from 283 reviews."
         path="/"
-        jsonLd={orgSchema()}
+        jsonLd={[orgSchema(), siteSchema()]}
       />
 
       {/* ── HERO ── */}
@@ -55,7 +55,7 @@ export default function HomePage() {
               '800+ orders shipped globally',
               '★★★★★  4.9 / 5 · 283 verified reviews',
               'Buyers in USA · UK · Canada · Indonesia · Australia · Europe',
-              'Factory-direct · 3 years in wholesale',
+              'Factory-direct · Manufacturing since 2008',
             ].map((t, i) => (
               <span key={i} className="eyebrow" style={{ color: 'var(--espresso-light)' }}>{t}</span>
             ))}
@@ -70,12 +70,13 @@ export default function HomePage() {
           <h2 className="serif mb-10" style={{ fontSize: 'clamp(2rem,4vw,3rem)' }}>Shop by category</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'All Products', count: '12 styles', img: '/assets/images/product-hero-01.webp', link: '/products' },
+              { label: 'All Products', count: '25 styles', img: '/assets/images/product-hero-01.webp', link: '/products' },
               { label: 'Custom / OEM', count: 'Any design', img: '/assets/images/product-hero-05.webp', link: '/custom-oem' },
-              { label: 'Custom Printed Modal', count: '3 styles', img: '/assets/images/modal-printed-01.webp', link: '/products' },
-              { label: 'Jersey Modal', count: '3 colourways', img: '/assets/images/jersey-modal-01.webp', link: '/products' },
-              { label: 'Custom Pantone Modal', count: '3 colourways', img: '/assets/images/pantone-modal-01.webp', link: '/products' },
-              { label: 'Custom Hemming', count: '3 styles', img: '/assets/images/hemming-custom-01.webp', link: '/products' },
+              { label: 'Custom Printed Modal', count: '9 styles', img: '/assets/images/modal-printed-01.webp', link: '/products?category=printed-modal' },
+              { label: 'Jersey Modal', count: '8 colourways', img: '/assets/images/jersey-modal-01.webp', link: '/products?category=jersey-modal' },
+              { label: 'Custom Pantone Modal', count: '3 colourways', img: '/assets/images/pantone-modal-01.webp', link: '/products?category=pantone-modal' },
+              { label: 'Custom Hemming', count: '3 finishes', img: '/assets/images/hemming-custom-01.webp', link: '/products?category=hemming' },
+              { label: 'Custom Jersey Cap', count: '2 styles', img: 'https://sc04.alicdn.com/kf/A3f5c09495c9b457c9c2deecbbd9a677aC.jpg', link: '/products?category=jersey-cap' },
             ].map((cat, i) => (
               <Link to={cat.link} key={i} className="group relative overflow-hidden block" style={{ textDecoration: 'none' }}>
                 <div style={{ aspectRatio: '3/4', overflow: 'hidden', background: 'var(--cream-2)' }}>
@@ -143,12 +144,12 @@ export default function HomePage() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { label: 'Custom Printed Modal', count: '3 styles', img: '/assets/images/product-model-09.jpg' },
-              { label: 'Jersey Modal', count: '3 colourways', img: '/assets/images/product-model-10.jpg' },
-              { label: 'Custom Pantone Modal', count: '3 colourways', img: '/assets/images/product-model-11.jpg' },
-              { label: 'Custom Hemming', count: '3 styles', img: '/assets/images/product-model-13.jpg' },
+              { label: 'Custom Printed Modal', count: '9 styles', img: '/assets/images/product-model-09.jpg', link: '/products?category=printed-modal' },
+              { label: 'Jersey Modal', count: '8 colourways', img: '/assets/images/product-model-10.jpg', link: '/products?category=jersey-modal' },
+              { label: 'Custom Pantone Modal', count: '3 colourways', img: '/assets/images/product-model-11.jpg', link: '/products?category=pantone-modal' },
+              { label: 'Custom Hemming', count: '3 finishes', img: '/assets/images/product-model-13.jpg', link: '/products?category=hemming' },
             ].map((mat, i) => (
-              <Link to="/products" key={i} className="group block" style={{ textDecoration: 'none' }}>
+              <Link to={mat.link} key={i} className="group block" style={{ textDecoration: 'none' }}>
                 <div className="overflow-hidden mb-3" style={{ aspectRatio: '3/4', background: 'var(--cream-2)' }}>
                   <img loading="lazy" decoding="async" src={mat.img} alt={mat.label} className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                 </div>

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSearchParams } from 'react-router-dom';
 import PageHeader from '../components/page-header/PageHeader';
 import ProductCard from '../components/products/ProductCard';
 import FooterCTA from '../components/cta/FooterCTA';
@@ -16,17 +17,37 @@ const categoryLabels = {
 };
 
 export default function ProductsPage() {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const requested = searchParams.get('category');
+  const activeCategory = categories.includes(requested) ? requested : 'all';
+
+  const setActiveCategory = (cat) => {
+    if (cat === 'all') setSearchParams({}, { replace: true });
+    else setSearchParams({ category: cat }, { replace: true });
+  };
 
   const filtered = activeCategory === 'all'
     ? products
     : products.filter((p) => p.category === activeCategory);
 
+  const isFiltered = activeCategory !== 'all';
+  const label = categoryLabels[activeCategory];
+
   return (
     <div data-component="products-page">
       <Seo
-        title="Custom Printed Modal Hijab — OEM & Private Label | Yiling"
-        description="Browse custom hijab collections: Printed Modal, Jersey Modal, Pantone Modal, Hemming finishing. MOQ from 100 pcs, factory-direct from Yiwu."
+        title={
+          isFiltered
+            ? `${label} Hijab Wholesale — OEM & Private Label | Yiling`
+            : 'Custom Printed Modal Hijab — OEM & Private Label Manufacturer | Yiling'
+        }
+        description={
+          isFiltered
+            ? `${label} hijab collection — ${filtered.length} styles, factory-direct from Yiwu, China. MOQ 100 pcs, OEM and private label welcome. Samples in 7 days.`
+            : `Browse ${products.length} custom hijab styles: Printed Modal, Jersey Modal, Pantone Modal, Custom Hemming, and Jersey Caps. MOQ from 100 pcs, factory-direct from Yiwu since 2008.`
+        }
+        // Filtered views are a client-side lens on the same collection —
+        // canonical always points at /products to avoid duplicate content.
         path="/products"
       />
       <PageHeader title="Our Products" breadcrumbs={[{ label: 'Products' }]} />
