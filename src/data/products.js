@@ -900,7 +900,7 @@ const products = [
       'https://sc04.alicdn.com/kf/A57dfa5a11e9a461ab7d3b04aa53ec176d.jpg',
       'https://sc04.alicdn.com/kf/Ad77f19e27f9147c18d5f8fbf54627dd9s.jpg',
     ],
-    category: 'jersey-modal',
+    category: 'jersey-cap',
     badge: 'NEW',
     stars: 5,
     reviews: 916,
