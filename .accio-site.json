@@ -7,8 +7,10 @@
   "buildCommand": "vite build",
   "outputDir": "dist",
   "entry": "index.html",
-  "databaseUrl": "",
   "createdBy": "accio-site-builder",
   "createdAt": "2026-08-03T08:38:44.117Z",
-  "installedAt": "2026-08-19T02:57:53.524Z"
+  "siteIdSyncStatus": "failed",
+  "siteIdSyncRetryable": true,
+  "installedAt": "2026-08-19T02:57:53.524Z",
+  "databaseUrl": ""
 }

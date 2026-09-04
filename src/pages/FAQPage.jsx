@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import Seo, { faqSchema } from '../components/seo/Seo';
@@ -11,7 +11,7 @@ const topics = [
     items: [
       { q: 'What is the minimum order quantity (MOQ)?', a: 'Our standard MOQ is 100 pieces per style per color. For mixed-style orders, the total must reach 100 pieces. For OEM/custom orders, MOQ may vary depending on design complexity — contact us to discuss.' },
       { q: 'How do I place a wholesale order?', a: 'Fill out the inquiry form on our Contact page, or reach us directly on WhatsApp (+86 150-8824-8404). Our team will respond within 24 hours with a quotation and order sheet.' },
-      { q: 'How long does production take?', a: 'For in-stock styles: 3–7 business days. For custom/OEM orders: samples in 7 days, bulk production in 25–35 days after sample approval.' },
+      { q: 'How long does production take?', a: 'For in-stock styles: 3–7 business days. For custom/OEM orders: samples in 7 days, bulk production in 10–15 days after sample approval.' },
       { q: 'Do you ship internationally?', a: 'Yes. We ship worldwide from Yiwu, China via DHL, FedEx, or sea freight depending on your order size and timeline. We can quote both door-to-door and FOB Yiwu.' },
       { q: 'Can I change or cancel my order?', a: 'For in-stock orders, please contact us within 24 hours of placing your order. For OEM/production orders, changes can be made before the cutting stage begins.' },
     ],
@@ -106,7 +106,7 @@ export default function FAQPage() {
     <div style={{ background: 'var(--cream)' }}>
       <Seo
         title="Wholesale Hijab FAQ — MOQ, Pricing, Lead Times"
-        description="25 answers for hijab wholesale buyers: 100 pc MOQ, volume pricing from $3.20, 7-day samples, 25-35 day bulk lead time, OEM and private label terms."
+        description="25 answers for hijab wholesale buyers: 100 pc MOQ, volume pricing from $3.20, 7-day samples, 10-15 day bulk lead time, OEM and private label terms."
         path="/faq"
         jsonLd={faqSchema(topics.flatMap(t => t.items))}
       />

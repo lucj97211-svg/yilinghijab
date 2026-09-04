@@ -1,9 +1,9 @@
-import React from 'react';
+﻿import React from 'react';
 import { Send, Package, Factory, ClipboardCheck } from 'lucide-react';
 
 const steps = [
   { icon: Send, title: 'Send Your Design', desc: 'Share your design files, sketches, or reference samples with our team.' },
-  { icon: Package, title: 'Sample Production', desc: 'We produce pre-production samples for your approval within 7 days.' },
+  { icon: Package, title: 'Sample Production', desc: 'We produce pre-production samples for your approval within 5–7 days.' },
   { icon: Factory, title: 'Bulk Manufacturing', desc: 'Once approved, your order moves to our production line with full QC.' },
   { icon: ClipboardCheck, title: 'Quality Check & Ship', desc: 'Every piece passes inspection before packing and shipping to your warehouse.' },
 ];

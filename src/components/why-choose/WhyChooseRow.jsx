@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 export default function WhyChooseRow() {
   return (
@@ -39,7 +39,7 @@ export default function WhyChooseRow() {
             {
               img: '/assets/images/factory-warehouse.webp',
               title: 'Ready-Stock & Made-to-Order',
-              body: 'Keep 200+ SKUs in stock for fast turnaround. Or place a custom order — sample in 7 days, bulk in 25–35 days.',
+              body: 'Keep 200+ SKUs in stock for fast turnaround. Or place a custom order — sample in 7 days, bulk in 10–15 days.',
             },
           ].map((col, i) => (
             <div key={i} className="p-8 md:p-10">

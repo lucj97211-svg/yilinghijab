@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Seo from '../components/seo/Seo';
 
 export default function ShippingPage() {
@@ -59,7 +59,7 @@ export default function ShippingPage() {
               <div>
                 <h2 className="serif mb-4" style={{ fontSize: '1.8rem' }}>Processing & timing</h2>
                 <p style={{ fontSize: '14px', color: 'var(--espresso-light)', lineHeight: 1.8 }}>
-                  In-stock orders are packed and handed to the freight forwarder within 3–5 business days. OEM/production orders ship after quality sign-off — typically 25–35 days from sample approval. Delivery estimates begin once your order leaves our warehouse in Yiwu.
+                  In-stock orders are packed and handed to the freight forwarder within 3–5 business days. OEM/production orders ship after quality sign-off — typically 10–15 days from sample approval. Delivery estimates begin once your order leaves our warehouse in Yiwu.
                 </p>
               </div>
 

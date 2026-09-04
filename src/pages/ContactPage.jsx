@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Seo from '../components/seo/Seo';
 
@@ -118,7 +118,7 @@ export default function ContactPage() {
             {[
               { step: '01', t: 'Quote within 24 hours', d: 'Send your styles, colourways, and quantities. We reply with tier pricing, fabric options, and a realistic production window — usually the same working day.' },
               { step: '02', t: 'Sample in ~7 days', d: 'We produce a pre-production sample so you can check hand feel, colour accuracy, and stitch quality. Sample fees are credited against your first bulk order.' },
-              { step: '03', t: 'Bulk in 25–35 days', d: 'After you approve the sample, bulk production runs 25 to 35 days depending on volume and finishing. First-piece approval can be filmed for remote buyers.' },
+              { step: '03', t: 'Bulk in 10–15 days', d: 'After you approve the sample, bulk production runs 10 to 15 days depending on volume and finishing. First-piece approval can be filmed for remote buyers.' },
               { step: '04', t: 'Ship worldwide', d: 'DHL, FedEx, or sea freight from Yiwu, quoted door-to-door or FOB. Full export documentation, carton labelling, and packing lists included.' },
             ].map((s, i) => (
               <div key={i}>

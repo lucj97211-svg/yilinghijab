@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export const ORIGIN = 'https://yilinghijab.com';
@@ -223,7 +223,7 @@ export function productFaqSchema(p) {
     },
     {
       q: 'What is the production lead time for a bulk order?',
-      a: 'Samples ship in about 7 days. Bulk production runs 25 to 35 days depending on order volume and finishing requirements, from our factory in Yiwu, Zhejiang, China.',
+      a: 'Samples ship in about 7 days. Bulk production runs 10 to 15 days depending on order volume and finishing requirements, from our factory in Yiwu, Zhejiang, China.',
     },
     {
       q: `What fabric and weight is the ${p.name}?`,

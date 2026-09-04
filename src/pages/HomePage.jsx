@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import FooterCTA from '../components/cta/FooterCTA';
 import TestimonialCard from '../components/testimonials/TestimonialCard';
@@ -134,7 +134,7 @@ export default function HomePage() {
               <p className="eyebrow mb-4" style={{ color: 'var(--gold)' }}>OEM PRODUCTION</p>
               <h2 className="serif mb-5" style={{ fontSize: 'clamp(1.8rem,4vw,3rem)' }}>Your label.<br /><em>Our factory.</em></h2>
               <p style={{ fontSize: '15px', color: 'var(--espresso-light)', lineHeight: 1.8, marginBottom: '32px' }}>
-                Custom colours, woven labels, hang tags, and packaging — all handled in-house. Sample in 7 days, bulk in 25–35 days.
+                Custom colours, woven labels, hang tags, and packaging — all handled in-house. Sample in 7 days, bulk in 10–15 days.
               </p>
               <Link to="/custom-oem" className="btn-espresso">Learn About OEM</Link>
             </div>
