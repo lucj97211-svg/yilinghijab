@@ -3,27 +3,12 @@ import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import Seo from '../components/seo/Seo';
 
-const filters = ['ALL', 'EVERYDAY DRAPE', 'OCCASION', 'QUICK & EASY', 'LAYERING'];
-
-const videos = [
-  { platform: 'YOUTUBE', title: 'How to style a custom printed modal hijab — everyday drape', creator: 'Yiling Hijab · Everyday Drape', url: 'https://www.youtube.com/@culturehijab', category: 'EVERYDAY DRAPE' },
-  { platform: 'YOUTUBE', title: 'Three go-to jersey hijab wraps', creator: 'Yiling Hijab · Everyday Drape', url: 'https://www.youtube.com/@culturehijab', category: 'EVERYDAY DRAPE' },
-  { platform: 'TIKTOK', title: 'Satin hijab for Eid — step by step', creator: 'Yiling Hijab · Occasion', url: 'https://www.tiktok.com', category: 'OCCASION' },
-  { platform: 'YOUTUBE', title: 'Occasion & formal hijab styling guide', creator: 'Yiling Hijab · Occasion', url: 'https://www.youtube.com/@culturehijab', category: 'OCCASION' },
-  { platform: 'TIKTOK', title: 'Quick hijab in under 2 minutes — jersey mini', creator: 'Yiling Hijab · Quick & Easy', url: 'https://www.tiktok.com', category: 'QUICK & EASY' },
-  { platform: 'INSTAGRAM', title: 'The no-pin wrap tutorial', creator: 'Yiling Hijab · Quick & Easy', url: 'https://www.instagram.com', category: 'QUICK & EASY' },
-  { platform: 'YOUTUBE', title: 'How to layer a modal hijab for maximum coverage', creator: 'Yiling Hijab · Layering', url: 'https://www.youtube.com/@culturehijab', category: 'LAYERING' },
-  { platform: 'INSTAGRAM', title: 'Full coverage layering with modal', creator: 'Yiling Hijab · Layering', url: 'https://www.instagram.com', category: 'LAYERING' },
-];
-
 const stylingFAQ = [
   { q: 'Which hijab fabric is best for beginners?', a: 'Jersey modal is the easiest fabric to start with. Its gentle four-way stretch grips naturally, so wraps hold their place without constant adjusting, and the modal blend adds a soft hand feel from the first wear.' },
   { q: 'How do I keep my hijab from slipping?', a: 'Start with a foundation: a seamless or full-coverage under scarf gives the fabric something to grip. jersey modal naturally stays put longer than smooth woven fabrics.' },
   { q: 'Which hijab should I recommend for occasions?', a: 'Custom Pantone modal in a deeper colourway is ideal for occasions. The soft sheen of a quality modal dye photographs beautifully and pairs well with a full-coverage under scarf.' },
-  { q: 'How should customers care for hijabs?', a: 'Hand wash cold, or machine wash on a gentle cycle inside a mesh bag. Lay flat or hang to dry. Jersey relaxes back to a soft, even drape; satin and chiffon should be kept off high heat.' },
+  { q: 'How should customers care for hijabs?', a: 'Hand wash cold, or machine wash on a gentle cycle inside a mesh bag. Lay flat or hang to dry. Jersey relaxes back to a soft, even drape; modal should be kept off high heat.' },
 ];
-
-const platformColors = { YOUTUBE: '#FF0000', TIKTOK: '#000000', INSTAGRAM: '#E4405F' };
 
 function FAQItem({ q, a }) {
   const [open, setOpen] = useState(false);
@@ -40,63 +25,21 @@ function FAQItem({ q, a }) {
 }
 
 export default function StylingGuidePage() {
-  const [activeFilter, setActiveFilter] = useState('ALL');
-  const shown = videos.filter(v => activeFilter === 'ALL' || v.category === activeFilter);
-
   return (
     <div style={{ background: 'var(--cream)' }}>
       <Seo
-        title="Hijab Styling Guide — Wrap Tutorials by Fabric | Yiling Hijab"
-        description="How to wrap chiffon, jersey, satin and modal hijabs. Everyday drape, occasion styling, quick wraps and layering techniques for retailers and end customers."
+        title="Hijab Styling Guide — Wrap Techniques by Fabric | Yiling Hijab"
+        description="How to wrap and style custom printed modal and jersey hijabs. Everyday drape, occasion styling, quick wraps and layering techniques for retailers and end customers."
         path="/styling-guide"
       />
       {/* HERO */}
       <section className="section-padding text-center" style={{ background: 'var(--cream-2)' }}>
         <div className="container-site" style={{ maxWidth: '640px' }}>
           <p className="eyebrow mb-4" style={{ color: 'var(--muted)' }}>THE STYLING GUIDE</p>
-          <h1 className="serif mb-5" style={{ fontSize: 'clamp(2rem,5vw,3.5rem)' }}>Hijab tutorials, by style.</h1>
+          <h1 className="serif mb-5" style={{ fontSize: 'clamp(2rem,5vw,3.5rem)' }}>Hijab styling, by fabric.</h1>
           <p style={{ fontSize: '15px', color: 'var(--espresso-light)', lineHeight: 1.8, marginBottom: '32px' }}>
-            Watch how to wrap, drape and style our hijabs — real tutorials gathered in one place. Filter by the style you want, then share with your customers.
+            Practical guidance on how to wrap, drape and style our custom printed modal and jersey hijabs — organised by fabric and occasion. Share with your customers as part of your brand's styling resource.
           </p>
-          {/* Filter chips */}
-          <div className="flex gap-2 flex-wrap justify-center">
-            {filters.map(f => (
-              <button key={f} onClick={() => setActiveFilter(f)} className="eyebrow px-5 py-2"
-                style={{
-                  background: activeFilter === f ? 'var(--espresso)' : 'transparent',
-                  color: activeFilter === f ? 'var(--cream)' : 'var(--muted)',
-                  border: `1px solid ${activeFilter === f ? 'var(--espresso)' : 'var(--border)'}`,
-                  cursor: 'pointer', fontSize: '11px',
-                }}>
-                {f}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* VIDEO GRID */}
-      <section className="section-padding">
-        <div className="container-site">
-          <div className="grid md:grid-cols-2 gap-8">
-            {shown.map((v, i) => (
-              <a key={i} href={v.url} target="_blank" rel="noopener noreferrer" className="group block" style={{ textDecoration: 'none' }}>
-                <div className="relative overflow-hidden mb-4" style={{ background: 'var(--cream-2)', height: '240px' }}>
-                  <img loading="lazy" decoding="async" src="/assets/images/factory-video-thumbnail.webp" alt={v.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div style={{ width: '56px', height: '56px', background: 'rgba(43,37,34,0.8)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <div style={{ width: 0, height: 0, borderTop: '10px solid transparent', borderBottom: '10px solid transparent', borderLeft: '16px solid var(--cream)', marginLeft: '4px' }} />
-                    </div>
-                  </div>
-                  <span className="absolute top-3 left-3 eyebrow px-3 py-1" style={{ background: platformColors[v.platform] || 'var(--espresso)', color: '#fff', fontSize: '10px' }}>
-                    {v.platform}
-                  </span>
-                </div>
-                <p className="serif text-xl mb-1 group-hover:opacity-70 transition-opacity" style={{ color: 'var(--espresso)' }}>{v.title}</p>
-                <p style={{ fontSize: '12px', color: 'var(--muted)' }}>{v.creator}</p>
-              </a>
-            ))}
-          </div>
         </div>
       </section>
 
