@@ -7,7 +7,7 @@ import products from '../data/products';
 import Seo from '../components/seo/Seo';
 import MaterialComparison, { materialComparisonSchema } from '../components/products/MaterialComparison';
 
-const categories = ['all', 'printed-modal', 'jersey-modal', 'pantone-modal', 'hemming', 'jersey-cap'];
+const categories = ['all', 'printed-modal', 'jersey-modal', 'pantone-modal', 'hemming', 'jersey-cap', 'bamboo-jersey'];
 const categoryLabels = {
   all: 'All Products',
   'printed-modal': 'Custom Printed Modal',
@@ -15,6 +15,7 @@ const categoryLabels = {
   'pantone-modal': 'Custom Pantone Modal',
   hemming: 'Custom Hemming',
   'jersey-cap': 'Custom Jersey Cap',
+  'bamboo-jersey': 'Custom Bamboo Jersey Hijab',
 };
 
 export default function ProductsPage() {
