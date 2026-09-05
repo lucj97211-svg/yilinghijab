@@ -1134,6 +1134,52 @@ const products = [
     ],
   },
 
+  {
+    id: 33,
+    slug: 'custom-bamboo-jersey-hijab-set-terracotta',
+    name: 'Custom Bamboo Jersey Hijab Set',
+    color: 'Terracotta',
+    material: 'Bamboo Jersey',
+    weight: '220–250 GSM',
+    size: 'Hijab: 180 x 75 cm + Matching Underscarf Cap',
+    moq: '100 sets',
+    price: '$6.00',
+    image: 'https://sc04.alicdn.com/kf/A8010ff6c4b9744f78128296b59362c98r.jpg',
+    gallery: [
+      'https://sc04.alicdn.com/kf/A8010ff6c4b9744f78128296b59362c98r.jpg',
+      'https://sc04.alicdn.com/kf/A96a148f152a2405ab8cf6a6eef6f7697c.jpg',
+      'https://sc04.alicdn.com/kf/Aee75230b360c461b84d07f6d87045f60K.jpg',
+      'https://sc04.alicdn.com/kf/A3790f6edce34404480ca3fe028120355o.jpg',
+      'https://sc04.alicdn.com/kf/A0cace91e9ed4450fb94c02401979d2e5D.jpg',
+      'https://sc04.alicdn.com/kf/Ae1eb1463cd4b40848593df260fd11e74H.jpg',
+    ],
+    galleryAlt: [
+      'Custom Bamboo Jersey Hijab Set in Terracotta — single model portrait wearing matching hijab and underscarf cap',
+      'Wholesale bamboo jersey hijab set terracotta — model three-quarter view showing inner cap and drape',
+      'Custom matching bamboo jersey hijab set — two models in terracotta, full set front view',
+      'Custom bamboo jersey hijab set supplier — side profile showcasing full cap and shoulder drape',
+      'Bamboo jersey hijab fabric texture close-up — terracotta colour knit surface detail',
+      'Custom bamboo jersey hijab set flat-lay — matching hijab and underscarf stitch and hem detail',
+    ],
+    category: 'bamboo-jersey',
+    badge: 'NEW',
+    stars: 5,
+    reviews: 0,
+    description: 'Factory-direct Custom Bamboo Jersey Hijab Set in terracotta — a warm, earthy colourway for custom bamboo jersey hijab set wholesale buyers, OEM brands, and private label businesses. The rich brick-orange tone is consistently achievable in our reactive-dye bamboo jersey, and each set pairs a full-length hijab with a coordinated inner cap for a complete, ready-to-wear modest look. As a dedicated custom bamboo jersey hijab manufacturer and supplier since 2008, we offer full OEM customisation: your Pantone-matched terracotta or any custom colour, woven label, hang tag, and retail packaging from MOQ 100 sets. The 220–250 GSM bamboo jersey delivers natural breathability, silky-smooth hand feel, four-way stretch with shape recovery, and a rich fluid drape — making this a strong anchor colourway for private label hijab collections and modest fashion wholesale lines.',
+    features: [
+      'Matching set: full-length bamboo jersey hijab + coordinated underscarf inner cap in terracotta',
+      '220–250 GSM bamboo jersey — breathable, moisture-wicking, skin-friendly, all-day comfortable',
+      'Four-way stretch with shape recovery — smooth drape and secure modest coverage',
+      'OEM / private label: custom Pantone colour, woven label, hang tag, and packaging from MOQ 100 sets',
+    ],
+    tiers: [
+      { qty: '100 - 499 sets', price: '$6.00' },
+      { qty: '500 - 1,999 sets', price: '$5.80' },
+      { qty: '2,000 - 4,999 sets', price: '$5.60' },
+      { qty: '5,000+ sets', price: '$5.20' },
+    ],
+  },
+
 ];
 
 export default products;
