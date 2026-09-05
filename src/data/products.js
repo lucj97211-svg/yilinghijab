@@ -1180,6 +1180,52 @@ const products = [
     ],
   },
 
+  {
+    id: 34,
+    slug: 'custom-bamboo-jersey-hijab-set-pearl-grey',
+    name: 'Custom Bamboo Jersey Hijab Set',
+    color: 'Pearl Grey',
+    material: 'Bamboo Jersey',
+    weight: '220–250 GSM',
+    size: 'Hijab: 180 x 75 cm + Matching Underscarf Cap',
+    moq: '100 sets',
+    price: '$6.00',
+    image: 'https://sc04.alicdn.com/kf/A4ae03766a7bf42d9853765e05e83261b1.jpg',
+    gallery: [
+      'https://sc04.alicdn.com/kf/A4ae03766a7bf42d9853765e05e83261b1.jpg',
+      'https://sc04.alicdn.com/kf/Ac22d83889024400290ad8fa0f93774d75.jpg',
+      'https://sc04.alicdn.com/kf/Ae84fd507aff346779fe597078a1351ebC.jpg',
+      'https://sc04.alicdn.com/kf/A40dddad67ba347b398b8faddfe83c623k.jpg',
+      'https://sc04.alicdn.com/kf/Aaace0e54f21c431ea7787459f8243bc23.jpg',
+      'https://sc04.alicdn.com/kf/Ae13ba0834844453f9f3dbea4579b495au.jpg',
+    ],
+    galleryAlt: [
+      'Custom Bamboo Jersey Hijab Set in Pearl Grey — single model front portrait wearing matching hijab and underscarf cap',
+      'Wholesale bamboo jersey hijab set pearl grey — two models back-to-back showing coordinated matching set',
+      'Custom matching bamboo jersey hijab set — single model seated showing full drape in pearl grey',
+      'Custom bamboo jersey hijab set supplier — two models close portrait showing cap stitching and fabric detail',
+      'Bamboo jersey hijab drape close-up — pearl grey fabric fold and shoulder coverage detail',
+      'Custom bamboo jersey hijab set flat-lay — matching hijab and underscarf hem stitch detail in pearl grey',
+    ],
+    category: 'bamboo-jersey',
+    badge: 'NEW',
+    stars: 5,
+    reviews: 0,
+    description: 'Factory-direct Custom Bamboo Jersey Hijab Set in pearl grey — a clean, versatile neutral colourway for custom bamboo jersey hijab set wholesale buyers, OEM brands, and private label businesses. The cool silver-grey tone works across seasons and coordinates effortlessly with any outfit palette, making it a reliable anchor SKU for hijab brand catalogues. Each set pairs a full-length bamboo jersey hijab with a coordinated inner cap for a complete, ready-to-wear modest look. As a dedicated custom bamboo jersey hijab manufacturer and supplier since 2008, we offer full OEM customisation: your Pantone-matched grey or any custom colour, woven label, hang tag, and retail packaging from MOQ 100 sets. The 220–250 GSM bamboo jersey delivers natural breathability, silky-smooth hand feel, four-way stretch with shape recovery, and a clean fluid drape — an essential versatile colourway for boutiques, modest fashion wholesalers, and private label hijab collections.',
+    features: [
+      'Matching set: full-length bamboo jersey hijab + coordinated underscarf inner cap in pearl grey',
+      '220–250 GSM bamboo jersey — breathable, moisture-wicking, skin-friendly, all-day comfortable',
+      'Four-way stretch with shape recovery — smooth drape and secure modest coverage',
+      'OEM / private label: custom Pantone colour, woven label, hang tag, and packaging from MOQ 100 sets',
+    ],
+    tiers: [
+      { qty: '100 - 499 sets', price: '$6.00' },
+      { qty: '500 - 1,999 sets', price: '$5.80' },
+      { qty: '2,000 - 4,999 sets', price: '$5.60' },
+      { qty: '5,000+ sets', price: '$5.20' },
+    ],
+  },
+
 ];
 
 export default products;
