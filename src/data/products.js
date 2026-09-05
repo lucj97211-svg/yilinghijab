@@ -918,6 +918,45 @@ const products = [
       { qty: '5,000+ pcs', price: '$3.72' },
     ],
   },
+  {
+    id: 28,
+    slug: 'bamboo-modal-hijab-midnight-black',
+    name: 'Bamboo Modal Hijab',
+    color: 'Midnight Black',
+    material: 'Custom Printed Modal',
+    weight: '130 GSM',
+    size: '180 x 75 cm',
+    moq: '100 pcs',
+    price: '$5.80',
+    image: 'https://sc04.alicdn.com/kf/Ab1bcf193a35047288f41e9632bb11a37d.jpg',
+    gallery: [
+      'https://sc04.alicdn.com/kf/Ab1bcf193a35047288f41e9632bb11a37d.jpg',
+      'https://sc04.alicdn.com/kf/A5d876a976b7c4d4cbe14378848e73f3fN.jpg',
+      'https://sc04.alicdn.com/kf/A4ae1e3e2eeed4ab59bdd61c2ebbc30c8k.jpg',
+      'https://sc04.alicdn.com/kf/A5dcd42dcf4b5408b9c29d6b878310089w.jpg',
+      'https://sc04.alicdn.com/kf/A9cb24f0b19564302a123965de08acfb3E.jpg',
+      'https://sc04.alicdn.com/kf/A91ebec0b256b418a9ec3b8fc15b575b2X.jpg',
+      'https://sc04.alicdn.com/kf/Ad438cd7b19424a5db3c9982193dc2e0bD.jpg',
+    ],
+    category: 'printed-modal',
+    badge: 'NEW',
+    stars: 5,
+    reviews: 247,
+    description: 'Factory-direct Bamboo Modal Hijab in midnight black — sought after by Bamboo Modal hijab wholesale buyers and private-label brands looking for a breathable, feather-light everyday essential. As a specialist Bamboo Modal hijab manufacturer and supplier since 2008, we produce this style in ultra-lightweight 130 GSM bamboo-modal at 180 × 75 cm, delivering the signature semi-sheer drape, natural moisture-wicking, and all-day softness that bamboo fibre is known for. OEM colour-matching, woven label, and retail packaging available from MOQ 100 pcs.',
+    features: [
+      'Ultra-lightweight 130 GSM bamboo-modal — feather-light, breathable, and naturally moisture-wicking',
+      'Semi-sheer midnight black with subtle cross-weave shimmer visible in natural light',
+      'Fluid, effortless drape — holds shape all day without pinning or stiffening',
+      'OEM / private label: custom colour, woven label, and retail packaging from MOQ 100 pcs',
+    ],
+    tiers: [
+      { qty: '100 - 499 pcs', price: '$5.80' },
+      { qty: '500 - 1,999 pcs', price: '$5.30' },
+      { qty: '2,000 - 4,999 pcs', price: '$4.90' },
+      { qty: '5,000+ pcs', price: '$4.50' },
+    ],
+  },
+
 ];
 
 export default products;
