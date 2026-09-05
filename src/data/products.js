@@ -1088,6 +1088,52 @@ const products = [
     ],
   },
 
+  {
+    id: 32,
+    slug: 'custom-bamboo-jersey-hijab-set-dusty-rose',
+    name: 'Custom Bamboo Jersey Hijab Set',
+    color: 'Dusty Rose',
+    material: 'Bamboo Jersey',
+    weight: '220–250 GSM',
+    size: 'Hijab: 180 x 75 cm + Matching Underscarf Cap',
+    moq: '100 sets',
+    price: '$6.00',
+    image: 'https://sc04.alicdn.com/kf/Abfde0d33bbbb4a7f86d8dd255d3f5faey.jpg',
+    gallery: [
+      'https://sc04.alicdn.com/kf/Abfde0d33bbbb4a7f86d8dd255d3f5faey.jpg',
+      'https://sc04.alicdn.com/kf/A668feef3483543d98cacc5aeacc90965Q.jpg',
+      'https://sc04.alicdn.com/kf/Ab4cec07482ca42f2a5a758473d566b4aT.jpg',
+      'https://sc04.alicdn.com/kf/Ac8842761fa304ce5a90da308b7c0387ah.jpg',
+      'https://sc04.alicdn.com/kf/A7627ad4bc5aa445ab5f2f2da017187091.jpg',
+      'https://sc04.alicdn.com/kf/A4128f3854a224da6a7b4a8a917e02046o.jpg',
+    ],
+    galleryAlt: [
+      'Custom Bamboo Jersey Hijab Set in Dusty Rose — model wearing matching hijab and underscarf cap',
+      'Custom matching bamboo jersey hijab set dusty rose — single model drape portrait view',
+      'Wholesale bamboo jersey hijab set — model seated with full drape in dusty rose mauve pink',
+      'Custom bamboo jersey hijab set supplier — shoulder and drape detail in dusty rose',
+      'Bamboo jersey hijab fabric drape close-up — dusty rose soft fold and texture detail',
+      'Custom bamboo jersey hijab set hem and stitch detail — matching hijab and underscarf set',
+    ],
+    category: 'bamboo-jersey',
+    badge: 'NEW',
+    stars: 5,
+    reviews: 0,
+    description: 'Factory-direct Custom Bamboo Jersey Hijab Set in dusty rose — a coordinated hijab and underscarf cap for custom bamboo jersey hijab set wholesale buyers, OEM brands, and private label businesses. This warm mauve-pink colourway pairs a fluid bamboo jersey hijab with a matching inner cap, giving end customers a complete, ready-to-wear modest look from a single source manufacturer. As a dedicated custom bamboo jersey hijab manufacturer and supplier since 2008, we offer full OEM customisation: your Pantone-matched colour, woven label, hang tag, and retail packaging from MOQ 100 sets. The 220–250 GSM bamboo jersey delivers natural breathability, a silky-smooth hand feel, four-way stretch with shape recovery, and an effortless fluid drape — making this a consistently strong private label product for boutiques, hijab brands, and modest fashion wholesalers worldwide.',
+    features: [
+      'Matching set: full-length bamboo jersey hijab + coordinated underscarf inner cap in dusty rose',
+      '220–250 GSM bamboo jersey — breathable, moisture-wicking, skin-friendly, all-day comfortable',
+      'Four-way stretch with shape recovery — smooth drape and secure modest coverage',
+      'OEM / private label: custom Pantone colour, woven label, hang tag, and packaging from MOQ 100 sets',
+    ],
+    tiers: [
+      { qty: '100 - 499 sets', price: '$6.00' },
+      { qty: '500 - 1,999 sets', price: '$5.80' },
+      { qty: '2,000 - 4,999 sets', price: '$5.60' },
+      { qty: '5,000+ sets', price: '$5.20' },
+    ],
+  },
+
 ];
 
 export default products;
