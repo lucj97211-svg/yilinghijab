@@ -3,7 +3,7 @@ import React from 'react';
 export default function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/8615088248404"
+      href="https://wa.me/8615088248404?text=Hi%2C%20I%27m%20interested%20in%20your%20custom%20hijab%20manufacturing.%20Could%20you%20share%20your%20catalog%20and%20MOQ%3F"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed z-50 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition-transform duration-200"

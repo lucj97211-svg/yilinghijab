@@ -52,8 +52,17 @@ export default function Footer() {
           <p style={{ fontSize: '13px', color: 'rgba(248,244,239,0.55)', lineHeight: 1.75, marginBottom: '24px' }}>
             New fabric drops, trend reports, and wholesale pricing — delivered to your inbox.
           </p>
-          <form className="flex max-w-xs mx-auto" onSubmit={e => e.preventDefault()}>
-            <input type="email" placeholder="Email address"
+          <form className="flex max-w-xs mx-auto" onSubmit={async e => {
+            e.preventDefault();
+            const email = e.target.email.value;
+            await fetch('https://formspree.io/f/xqabkgqb', {
+              method: 'POST',
+              body: JSON.stringify({ email, _subject: 'Newsletter signup' }),
+              headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            });
+            e.target.reset();
+          }}>
+            <input type="email" name="email" required placeholder="Email address"
               className="flex-1 px-4 py-3 text-sm"
               style={{ background: 'rgba(248,244,239,0.08)', border: '1px solid rgba(248,244,239,0.2)', borderRight: 'none', outline: 'none', color: 'var(--cream)', fontFamily: "'Jost',sans-serif" }} />
             <button type="submit" className="eyebrow px-5 py-3"
@@ -142,9 +151,9 @@ export default function Footer() {
           <p style={{ fontSize: '11px', color: 'rgba(248,244,239,0.25)' }}>
             © {new Date().getFullYear()} Yiling Hijab — Yiwu Yiling Clothing Co., Ltd. All rights reserved.
           </p>
-          <p className="eyebrow" style={{ color: 'rgba(248,244,239,0.25)', fontSize: '10px', letterSpacing: '0.22em' }}>
-            QUALITY IS THE MEANS TO ALL TRUST
-          </p>
+          <a href="mailto:peri@wennuanfactory.com" style={{ fontSize: '11px', color: 'rgba(248,244,239,0.45)', textDecoration: 'none', letterSpacing: '0.04em' }}>
+            peri@wennuanfactory.com
+          </a>
           <div className="flex gap-4">
             {['Privacy Policy', 'Terms of Service'].map(label => (
               <span key={label} style={{ fontSize: '11px', color: 'rgba(248,244,239,0.25)', cursor: 'pointer' }}>{label}</span>

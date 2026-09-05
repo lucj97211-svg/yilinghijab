@@ -73,6 +73,8 @@ export default function Seo({
       <meta property="og:url" content={url} />
       <meta property="og:image" content={ogImage} />
 
+      <meta name="robots" content="index, follow" />
+
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />

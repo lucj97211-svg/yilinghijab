@@ -22,7 +22,7 @@ export default function FooterCTA() {
           }}>
             Request a Quote
           </Link>
-          <a href={`https://wa.me/8615088248404`} target="_blank" rel="noopener noreferrer" style={{
+          <a href="https://wa.me/8615088248404?text=Hi%2C%20I%27m%20interested%20in%20your%20custom%20hijab%20manufacturing.%20Could%20you%20share%20your%20catalog%20and%20MOQ%3F" target="_blank" rel="noopener noreferrer" style={{
             background: '#25D366', color: '#fff',
             fontFamily: "'Jost', sans-serif", fontSize: '12px', fontWeight: 500,
             textTransform: 'uppercase', letterSpacing: '0.20em',

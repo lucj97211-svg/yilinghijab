@@ -219,9 +219,20 @@ export default function HomePage() {
           <p style={{ fontSize: '14px', color: 'var(--espresso-light)', lineHeight: 1.8, marginBottom: '28px' }}>
             New fabric drops, trend reports, and wholesale pricing updates — delivered to your inbox.
           </p>
-          <form className="flex gap-0 max-w-sm mx-auto" onSubmit={e => e.preventDefault()}>
+          <form className="flex gap-0 max-w-sm mx-auto" onSubmit={async e => {
+            e.preventDefault();
+            const email = e.target.email.value;
+            await fetch('https://formspree.io/f/xqabkgqb', {
+              method: 'POST',
+              body: JSON.stringify({ email, _subject: 'Newsletter signup' }),
+              headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            });
+            e.target.reset();
+          }}>
             <input
               type="email"
+              name="email"
+              required
               placeholder="Email address"
               className="flex-1 px-4 py-3 text-sm"
               style={{ background: 'var(--cream)', border: '1px solid var(--border)', borderRight: 'none', outline: 'none', fontFamily: "'Jost',sans-serif", color: 'var(--espresso)' }}
