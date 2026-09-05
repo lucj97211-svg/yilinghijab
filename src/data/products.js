@@ -957,6 +957,44 @@ const products = [
     ],
   },
 
+  {
+    id: 29,
+    slug: 'custom-bamboo-modal-hijab-dark-chocolate',
+    name: 'Custom Bamboo Modal Hijab',
+    color: 'Dark Chocolate',
+    material: 'Custom Pantone Modal',
+    weight: '130 GSM',
+    size: '180 x 75 cm',
+    moq: '100 pcs',
+    price: '$5.20',
+    image: 'https://sc04.alicdn.com/kf/A1d9f1cedbad0457b9f2c3997934becef9.jpg',
+    gallery: [
+      'https://sc04.alicdn.com/kf/A1d9f1cedbad0457b9f2c3997934becef9.jpg',
+      'https://sc04.alicdn.com/kf/A14b322a5efed47bfbbbb6d230c46e1acm.jpg',
+      'https://sc04.alicdn.com/kf/Abb76391d66874137952a9a8240f7ae00D.jpg',
+      'https://sc04.alicdn.com/kf/A18f6b2357c1049f68dd18564aa49f5e87.jpg',
+      'https://sc04.alicdn.com/kf/A79b2b6bf240f4484b169b34651463a2et.jpg',
+      'https://sc04.alicdn.com/kf/Ac6156aa933d84cc39e71cb289e447c118.jpg',
+    ],
+    category: 'pantone-modal',
+    badge: 'NEW',
+    stars: 5,
+    reviews: 198,
+    description: 'Factory-direct Custom Bamboo Modal Hijab in dark chocolate — ideal for CUSTOM Bamboo Modal hijab wholesale buyers and private-label brands seeking a luxurious, breathable solid-colour essential. As a dedicated CUSTOM Bamboo Modal hijab manufacturer and supplier since 2008, we produce this style in ultra-lightweight 130 GSM bamboo-modal, Pantone-matched to your exact colour reference. Our reactive dye process delivers Delta E variance below 2, ensuring the deep chocolate tone reproduces consistently across bulk and repeat orders. The bamboo fibre delivers natural moisture-wicking, silky-soft hand feel, and a signature fluid drape. OEM woven label and retail packaging available from MOQ 100 pcs.',
+    features: [
+      'Pantone-matched dark chocolate — reactive dye, Delta E < 2 colour accuracy across all runs',
+      'Ultra-lightweight 130 GSM bamboo-modal — breathable, moisture-wicking, silky-soft hand feel',
+      'Fluid, semi-sheer drape with clean rolled-hem finish',
+      'OEM / private label: custom Pantone colour, woven label, and retail packaging from MOQ 100 pcs',
+    ],
+    tiers: [
+      { qty: '100 - 499 pcs', price: '$5.20' },
+      { qty: '500 - 1,999 pcs', price: '$4.78' },
+      { qty: '2,000 - 4,999 pcs', price: '$4.40' },
+      { qty: '5,000+ pcs', price: '$4.05' },
+    ],
+  },
+
 ];
 
 export default products;
