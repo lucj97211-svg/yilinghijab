@@ -101,6 +101,8 @@ export default function ProductDetailPage() {
   const metaDescription =
     product.category === 'hemming'
       ? `${product.color} hem finishing on ${product.weight} modal hijabs. Factory-direct from ${product.price}/pc, MOQ ${product.moq}. OEM and private label, samples in 7 days.`
+      : product.category === 'bamboo-jersey'
+      ? `Custom Bamboo Jersey Hijab Set — matching hijab & underscarf, wholesale & OEM. Custom colour, logo, packaging. MOQ ${product.moq}. Factory-direct supplier since 2008.`
       : `${product.color} ${product.material.toLowerCase()} hijab, ${product.weight}. Factory-direct from ${product.price}/pc, MOQ ${product.moq}. OEM and private label, samples in 7 days.`;
 
   return (
@@ -145,7 +147,7 @@ export default function ProductDetailPage() {
               <div className="mb-4 overflow-hidden" style={{ background: 'var(--cream-2)' }}>
                 <img loading="lazy" decoding="async"
                   src={product.gallery[activeImg]}
-                  alt={`${product.name} ${product.color}`}
+                  alt={product.galleryAlt?.[activeImg] || `${product.name} ${product.color}`}
                   className="w-full object-cover"
                   style={{ height: '520px' }}
                 />
@@ -163,7 +165,7 @@ export default function ProductDetailPage() {
                     }}
                     aria-label={`View image ${i + 1}`}
                   >
-                    <img loading="lazy" decoding="async" src={img} alt="Wholesale hijab product thumbnail" className="w-full object-cover" style={{ height: '90px' }} />
+                    <img loading="lazy" decoding="async" src={img} alt={product.galleryAlt?.[i] || `${product.name} ${product.color} view ${i + 1}`} className="w-full object-cover" style={{ height: '90px' }} />
                   </button>
                 ))}
               </div>

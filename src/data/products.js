@@ -995,6 +995,53 @@ const products = [
     ],
   },
 
+  // ── BAMBOO JERSEY ─────────────────────────────────────────────────
+  {
+    id: 30,
+    slug: 'custom-bamboo-jersey-hijab-set',
+    name: 'Custom Bamboo Jersey Hijab Set',
+    color: 'Steel Blue',
+    material: 'Bamboo Jersey',
+    weight: '[请确认 GSM]',
+    size: 'Hijab: 180 x 75 cm + Matching Underscarf Cap',
+    moq: '100 sets',
+    price: '[请确认]',
+    image: 'https://sc04.alicdn.com/kf/Aedc157a31e61493ab99bb1e7f4408b7f2.jpg',
+    gallery: [
+      'https://sc04.alicdn.com/kf/Aedc157a31e61493ab99bb1e7f4408b7f2.jpg',
+      'https://sc04.alicdn.com/kf/Afe29fe140d2948fb95cd44ef6ea7aa81q.jpg',
+      'https://sc04.alicdn.com/kf/A33f0aaa2aa2c41a5a5ed28944841043cp.jpg',
+      'https://sc04.alicdn.com/kf/A37cfb8d00fae430faacf1cb532eee324q.jpg',
+      'https://sc04.alicdn.com/kf/Ac3be9c25b82b4947a60c8b0845334223B.jpg',
+      'https://sc04.alicdn.com/kf/A715684c44d714d878723af3c8fa72354k.jpg',
+    ],
+    galleryAlt: [
+      'Custom Bamboo Jersey Hijab Set in Steel Blue — matching hijab and underscarf wholesale',
+      'Custom matching bamboo jersey hijab set — B2B wholesale OEM manufacturer',
+      'Bamboo Jersey Hijab Set — two models wearing coordinated matching set',
+      'Wholesale Bamboo Jersey Hijab Set — bamboo jersey fabric drape close-up',
+      'Custom bamboo jersey hijab set fabric texture — smooth knit surface detail',
+      'Bamboo jersey hijab fabric stretch and drape — private label hijab set supplier',
+    ],
+    category: 'bamboo-jersey',
+    badge: 'NEW',
+    stars: 5,
+    reviews: 0,
+    description: 'Factory-direct Custom Bamboo Jersey Hijab Set — a matching hijab and underscarf cap produced from soft bamboo jersey for custom bamboo jersey hijab set wholesale buyers, OEM brands, and private label businesses. Each set pairs a full-length bamboo jersey hijab with a coordinated inner cap in the same colour, giving your customers a complete, ready-to-wear modest look sourced from a single manufacturer. As a dedicated custom bamboo jersey hijab manufacturer and supplier since 2008, we offer full customisation: your Pantone colour, woven label, hang tag, and retail packaging from MOQ 100 sets. Bamboo jersey delivers natural breathability, a smooth silky hand feel, four-way stretch, and a fluid drape — making this set a strong private label product for boutiques, hijab brands, and modest fashion wholesalers.',
+    features: [
+      'Matching set: full-length bamboo jersey hijab + coordinated underscarf inner cap',
+      'Soft bamboo jersey — breathable, moisture-wicking, skin-friendly, comfortable for long wear',
+      'Four-way stretch with shape recovery — smooth drape and secure coverage',
+      'OEM / private label: custom colour, woven label, hang tag, and retail packaging from MOQ 100 sets',
+    ],
+    tiers: [
+      { qty: '100 - 499 sets', price: '[请确认]' },
+      { qty: '500 - 1,999 sets', price: '[请确认]' },
+      { qty: '2,000 - 4,999 sets', price: '[请确认]' },
+      { qty: '5,000+ sets', price: '[请确认]' },
+    ],
+  },
+
 ];
 
 export default products;

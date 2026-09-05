@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import products from '../../data/products';
 
-const CATEGORY_ORDER = ['printed-modal', 'jersey-modal', 'pantone-modal', 'hemming', 'jersey-cap'];
+const CATEGORY_ORDER = ['printed-modal', 'jersey-modal', 'pantone-modal', 'hemming', 'jersey-cap', 'bamboo-jersey'];
 
 const LABELS = {
   'printed-modal': 'Custom Printed Modal',
@@ -10,6 +10,7 @@ const LABELS = {
   'pantone-modal': 'Custom Pantone Modal',
   hemming: 'Custom Hemming',
   'jersey-cap': 'Custom Jersey Cap',
+  'bamboo-jersey': 'Custom Bamboo Jersey Hijab',
 };
 
 // Editorial guidance — who each line is actually for. Kept alongside the
@@ -39,6 +40,11 @@ const POSITIONING = {
     bestFor: 'Add-on basket builders and undercap accessory lines',
     notFor: 'Standalone hero products carrying a collection',
     finish: 'Pull-on or tie-back cap, one size fits all',
+  },
+  'bamboo-jersey': {
+    bestFor: 'Brands building a matched set programme — hijab + underscarf in one SKU',
+    notFor: 'Buyers who only need a standalone scarf without a matching inner cap',
+    finish: 'Matching hijab & inner cap set, custom colour, OEM packaging available',
   },
 };
 

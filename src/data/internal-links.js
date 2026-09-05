@@ -42,9 +42,9 @@ const CATEGORY_TO_POSTS = {
 const POST_CATEGORY_TO_PRODUCTS = {
   'Product Guide': ['printed-modal', 'jersey-modal'],
   'Sourcing Guide': ['printed-modal', 'jersey-modal', 'pantone-modal'],
-  'OEM Guide': ['pantone-modal', 'hemming', 'printed-modal'],
-  'Factory Story': ['printed-modal', 'hemming'],
-  'Brand Guide': ['printed-modal', 'pantone-modal'],
+  'OEM Guide': ['pantone-modal', 'hemming', 'printed-modal', 'bamboo-jersey'],
+  'Factory Story': ['printed-modal', 'hemming', 'bamboo-jersey'],
+  'Brand Guide': ['printed-modal', 'pantone-modal', 'bamboo-jersey'],
 };
 
 // Per-slug overrides where the article is clearly about one product line.
