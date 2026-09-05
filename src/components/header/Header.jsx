@@ -12,6 +12,7 @@ const mainNav = [
       { label: 'Jersey Modal', to: '/products' },
       { label: 'Custom Pantone Modal', to: '/products' },
       { label: 'Custom Hemming', to: '/products' },
+      { label: 'Custom Bamboo Jersey Hijab', to: '/products?category=bamboo-jersey' },
       { label: 'Shop all', to: '/products' },
     ],
   },
